@@ -1,0 +1,169 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Services" description="Spanish medical interpreting services — on-site, video, phone, and document translation. HIPAA-compliant and certified.">
+
+  <!-- HERO -->
+  <section class="bg-deep-forest py-24 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-20"
+         style="background: radial-gradient(ellipse at 20% 50%, #7A9E7E 0%, transparent 60%);">
+    </div>
+    <div class="relative max-w-6xl mx-auto px-6">
+      <p class="text-xs tracking-[4px] uppercase text-clay mb-4 font-body">What We Offer</p>
+      <h1 class="font-display text-5xl text-cream mb-6">Our Services</h1>
+      <p class="text-mist/80 max-w-xl leading-relaxed">
+        Flexible, professional Spanish interpreting across all modalities — designed to fit
+        your workflow and your patients' needs.
+      </p>
+    </div>
+  </section>
+
+  <!-- SERVICES DETAIL -->
+  <section class="max-w-6xl mx-auto px-6 py-20 space-y-16">
+
+    <!-- On-Site -->
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <div class="text-4xl mb-4">🏥</div>
+        <p class="text-xs tracking-[3px] uppercase text-earth mb-3 font-body">Service 01</p>
+        <h2 class="font-display text-3xl text-deep-forest mb-4">On-Site Interpreting</h2>
+        <p class="text-bark/70 leading-relaxed mb-4">
+          In-person interpreting at your clinic, hospital, exam room, or office. The gold standard
+          for sensitive appointments — surgeries, diagnoses, informed consent, and mental health visits
+          where human presence makes all the difference.
+        </p>
+        <p class="text-bark/70 leading-relaxed mb-6">
+          Michelle arrives prepared, professional, and ready to help your team deliver exceptional
+          care to Spanish-speaking patients.
+        </p>
+        <a href="/contact" class="inline-block bg-clay text-white text-sm font-medium px-6 py-3 rounded-full hover:bg-earth transition-colors">
+          Schedule On-Site →
+        </a>
+      </div>
+      <div class="bg-mist/30 rounded-2xl p-10 border border-mist">
+        <h3 class="font-body font-medium text-deep-forest mb-4 text-sm uppercase tracking-widest">Best For</h3>
+        <ul class="space-y-3">
+          {['Complex medical consultations', 'Informed consent discussions', 'Mental health & behavioral health', 'Surgical pre/post appointments', 'Pediatric visits with families', 'Annual wellness exams'].map(item => (
+            <li class="flex items-center gap-3 text-sm text-bark">
+              <span class="w-1.5 h-1.5 rounded-full bg-clay inline-block flex-shrink-0"></span>
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    <hr class="border-mist"/>
+
+    <!-- Video -->
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div class="order-2 md:order-1 bg-mist/30 rounded-2xl p-10 border border-mist">
+        <h3 class="font-body font-medium text-deep-forest mb-4 text-sm uppercase tracking-widest">Best For</h3>
+        <ul class="space-y-3">
+          {['Telehealth & virtual appointments', 'Multi-site healthcare systems', 'Follow-up consultations', 'Remote patient monitoring', 'Specialist referral calls', 'Insurance & billing discussions'].map(item => (
+            <li class="flex items-center gap-3 text-sm text-bark">
+              <span class="w-1.5 h-1.5 rounded-full bg-clay inline-block flex-shrink-0"></span>
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div class="order-1 md:order-2">
+        <div class="text-4xl mb-4">🎥</div>
+        <p class="text-xs tracking-[3px] uppercase text-earth mb-3 font-body">Service 02</p>
+        <h2 class="font-display text-3xl text-deep-forest mb-4">Video Remote Interpreting</h2>
+        <p class="text-bark/70 leading-relaxed mb-4">
+          High-quality VRI via your preferred video platform — Zoom, Teams, Doxy.me, or any
+          telehealth system. Visual connection matters, and VRI preserves the human element
+          of remote care.
+        </p>
+        <p class="text-bark/70 leading-relaxed mb-6">
+          Perfect for healthcare systems with multiple locations or practices that have shifted
+          to hybrid care models.
+        </p>
+        <a href="/contact" class="inline-block bg-clay text-white text-sm font-medium px-6 py-3 rounded-full hover:bg-earth transition-colors">
+          Schedule Video →
+        </a>
+      </div>
+    </div>
+
+    <hr class="border-mist"/>
+
+    <!-- Phone -->
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <div class="text-4xl mb-4">📞</div>
+        <p class="text-xs tracking-[3px] uppercase text-earth mb-3 font-body">Service 03</p>
+        <h2 class="font-display text-3xl text-deep-forest mb-4">Phone Interpreting</h2>
+        <p class="text-bark/70 leading-relaxed mb-4">
+          Fast, accessible phone interpreting for situations when immediacy matters most.
+          Ideal for urgent questions, triage situations, or when video access isn't available.
+        </p>
+        <p class="text-bark/70 leading-relaxed mb-6">
+          Schedule in advance for planned calls, or discuss on-demand availability for
+          your organization's needs.
+        </p>
+        <a href="/contact" class="inline-block bg-clay text-white text-sm font-medium px-6 py-3 rounded-full hover:bg-earth transition-colors">
+          Learn More →
+        </a>
+      </div>
+      <div class="bg-mist/30 rounded-2xl p-10 border border-mist">
+        <h3 class="font-body font-medium text-deep-forest mb-4 text-sm uppercase tracking-widest">Best For</h3>
+        <ul class="space-y-3">
+          {['Urgent clinical situations', 'Prescription & follow-up calls', 'Appointment reminders', 'Insurance pre-authorization', 'Quick triage questions', 'After-hours access'].map(item => (
+            <li class="flex items-center gap-3 text-sm text-bark">
+              <span class="w-1.5 h-1.5 rounded-full bg-clay inline-block flex-shrink-0"></span>
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    <hr class="border-mist"/>
+
+    <!-- Document -->
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div class="order-2 md:order-1 bg-mist/30 rounded-2xl p-10 border border-mist">
+        <h3 class="font-body font-medium text-deep-forest mb-4 text-sm uppercase tracking-widest">Best For</h3>
+        <ul class="space-y-3">
+          {['Informed consent forms', 'Discharge instructions', 'Patient intake documents', 'Medical records', 'Educational materials', 'HIPAA notices & policies'].map(item => (
+            <li class="flex items-center gap-3 text-sm text-bark">
+              <span class="w-1.5 h-1.5 rounded-full bg-clay inline-block flex-shrink-0"></span>
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div class="order-1 md:order-2">
+        <div class="text-4xl mb-4">📄</div>
+        <p class="text-xs tracking-[3px] uppercase text-earth mb-3 font-body">Service 04</p>
+        <h2 class="font-display text-3xl text-deep-forest mb-4">Document Translation</h2>
+        <p class="text-bark/70 leading-relaxed mb-4">
+          Accurate, medically precise Spanish translation of written materials. From consent
+          forms to discharge instructions, every word is translated with the care and accuracy
+          patients deserve.
+        </p>
+        <p class="text-bark/70 leading-relaxed mb-6">
+          Timely turnaround for healthcare organizations that need reliable, consistent
+          Spanish documentation.
+        </p>
+        <a href="/contact" class="inline-block bg-clay text-white text-sm font-medium px-6 py-3 rounded-full hover:bg-earth transition-colors">
+          Request Translation →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-cream py-20 text-center">
+    <div class="max-w-2xl mx-auto px-6">
+      <h2 class="font-display text-3xl text-deep-forest mb-4">Not sure which service fits?</h2>
+      <p class="text-bark/70 mb-8">Let's talk through your needs and find the right solution for your organization.</p>
+      <a href="/contact" class="inline-block bg-clay text-white font-medium px-8 py-4 rounded-full hover:bg-earth transition-colors">
+        Get in Touch →
+      </a>
+    </div>
+  </section>
+
+</Layout>

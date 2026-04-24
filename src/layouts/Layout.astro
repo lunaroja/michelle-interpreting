@@ -1,0 +1,109 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+}
+const {
+  title,
+  description = "Professional Spanish medical interpreting services. On-site, video, and phone. HIPAA-compliant. Serving healthcare providers and patients."
+} = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content={description} />
+  <title>{title} | Mi Voz Interpreting</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+</head>
+<body class="bg-warm-white font-body text-bark antialiased">
+
+  <!-- HEADER -->
+  <header class="bg-deep-forest sticky top-0 z-50 shadow-md">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="/" class="flex items-baseline gap-1.5 group">
+        <span class="font-display italic text-3xl text-clay leading-none">Mi</span>
+        <span class="font-display font-semibold text-3xl text-cream leading-none">Voz</span>
+        <span class="font-body text-xs tracking-[4px] uppercase text-sage ml-1 hidden sm:block">Interpreting</span>
+      </a>
+
+      <!-- Nav -->
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="/" class="text-sm text-mist hover:text-clay transition-colors">Home</a>
+        <a href="/services" class="text-sm text-mist hover:text-clay transition-colors">Services</a>
+        <a href="/providers" class="text-sm text-mist hover:text-clay transition-colors">For Providers</a>
+        <a href="/about" class="text-sm text-mist hover:text-clay transition-colors">About</a>
+      </nav>
+
+      <!-- CTA -->
+      <a href="/contact"
+         class="bg-clay text-white text-sm font-medium px-5 py-2.5 rounded-full hover:bg-earth transition-colors whitespace-nowrap">
+        Book a Session
+      </a>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <slot />
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-deep-forest text-mist mt-24">
+    <div class="max-w-6xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-3 gap-12">
+
+      <!-- Brand -->
+      <div>
+        <div class="flex items-baseline gap-1.5 mb-3">
+          <span class="font-display italic text-2xl text-clay">Mi</span>
+          <span class="font-display font-semibold text-2xl text-cream">Voz</span>
+        </div>
+        <p class="text-xs tracking-[4px] uppercase text-sage mb-4">Interpreting</p>
+        <p class="text-sm leading-relaxed text-mist/80 max-w-xs">
+          Professional Spanish medical interpreting — on-site, video, and phone.
+          Your voice. Their care.
+        </p>
+      </div>
+
+      <!-- Links -->
+      <div>
+        <h3 class="text-xs tracking-[3px] uppercase text-clay mb-5 font-medium">Navigation</h3>
+        <ul class="space-y-3">
+          <li><a href="/" class="text-sm text-mist/80 hover:text-clay transition-colors">Home</a></li>
+          <li><a href="/services" class="text-sm text-mist/80 hover:text-clay transition-colors">Services</a></li>
+          <li><a href="/providers" class="text-sm text-mist/80 hover:text-clay transition-colors">For Providers</a></li>
+          <li><a href="/about" class="text-sm text-mist/80 hover:text-clay transition-colors">About Michelle</a></li>
+          <li><a href="/contact" class="text-sm text-mist/80 hover:text-clay transition-colors">Contact & Book</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h3 class="text-xs tracking-[3px] uppercase text-clay mb-5 font-medium">Get in Touch</h3>
+        <ul class="space-y-3">
+          <li class="text-sm text-mist/80">📞 (555) 000-0000</li>
+          <li class="text-sm text-mist/80">✉️ hello@mivozinterpreting.com</li>
+          <li class="text-sm text-mist/80 mt-4">HIPAA Compliant · Certified</li>
+          <li class="mt-4">
+            <a href="/contact"
+               class="inline-block bg-clay text-white text-xs font-medium px-4 py-2 rounded-full hover:bg-earth transition-colors">
+              Book a Session →
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-forest/50 max-w-6xl mx-auto px-6 py-6 flex flex-col sm:flex-row justify-between items-center gap-3">
+      <p class="text-xs text-mist/50">© {new Date().getFullYear()} Mi Voz Interpreting. All rights reserved.</p>
+      <p class="text-xs text-mist/50 italic font-display">"Your voice. Their care."</p>
+    </div>
+  </footer>
+
+</body>
+</html>

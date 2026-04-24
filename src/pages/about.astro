@@ -1,0 +1,114 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="About Michelle" description="Meet Michelle, founder of Mi Voz Interpreting — certified Spanish medical interpreter dedicated to giving every patient their voice.">
+
+  <!-- HERO -->
+  <section class="bg-deep-forest py-24 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-20"
+         style="background: radial-gradient(ellipse at 30% 60%, #C4956A 0%, transparent 55%);">
+    </div>
+    <div class="relative max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <p class="text-xs tracking-[4px] uppercase text-clay mb-4 font-body">The Person Behind Mi Voz</p>
+        <h1 class="font-display text-5xl text-cream mb-6 leading-tight">
+          Meet <span class="italic text-clay">Michelle.</span>
+        </h1>
+        <p class="text-mist/80 leading-relaxed text-lg">
+          Certified medical interpreter. Passionate advocate. The voice for patients who need one most.
+        </p>
+      </div>
+      <!-- Photo placeholder -->
+      <div class="bg-forest/40 rounded-2xl aspect-square max-w-sm mx-auto md:mx-0 w-full flex items-center justify-center border border-forest">
+        <div class="text-center">
+          <div class="text-6xl mb-3">👤</div>
+          <p class="text-xs tracking-[3px] uppercase text-sage">Photo Coming Soon</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section class="max-w-4xl mx-auto px-6 py-20">
+    <p class="text-xs tracking-[4px] uppercase text-earth mb-6 font-body">Her Story</p>
+
+    <div class="prose-like space-y-6">
+      <p class="text-lg text-bark leading-relaxed">
+        Michelle has spent her career doing one thing: making sure Spanish-speaking patients
+        are fully heard, understood, and able to advocate for themselves in a healthcare system
+        that wasn't built with them in mind.
+      </p>
+
+      <blockquote class="border-l-4 border-clay pl-6 my-10">
+        <p class="font-display italic text-2xl text-forest leading-relaxed">
+          "Mi Voz means My Voice. It's the voice I lend to patients who walk into a clinic
+          afraid, confused, and unable to communicate what they're feeling — until I'm there."
+        </p>
+        <footer class="mt-4 text-sm text-earth">— Michelle, Founder</footer>
+      </blockquote>
+
+      <p class="text-bark/80 leading-relaxed">
+        After years of professional experience with a leading California language services agency,
+        Michelle knows firsthand what excellent medical interpreting looks like — and what it
+        requires. She brings that agency-trained expertise to every engagement, with the added
+        benefit of a personal, dedicated relationship that no large agency can replicate.
+      </p>
+
+      <p class="text-bark/80 leading-relaxed">
+        What drives her isn't the business — it's the moment a patient's face relaxes because
+        they finally understand what's happening to their own body. It's the doctor who can
+        finally have a real conversation with their patient. It's the family that walks out of
+        a consultation feeling informed, not lost.
+      </p>
+
+      <p class="text-bark/80 leading-relaxed">
+        That's why Mi Voz exists. And that's what Michelle brings to every appointment —
+        whether it's on-site, over video, or by phone.
+      </p>
+    </div>
+  </section>
+
+  <!-- CREDENTIALS -->
+  <section class="bg-cream py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <p class="text-xs tracking-[4px] uppercase text-earth mb-4 font-body">Credentials & Training</p>
+      <h2 class="font-display text-3xl text-deep-forest mb-12">
+        The expertise you can <span class="italic">count on.</span>
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          { icon: '🎓', title: 'Professional Certification', desc: 'Certified medical interpreter with formal training in healthcare interpreting standards and ethics.' },
+          { icon: '🏛️', title: 'Agency Experience', desc: 'Trained and worked inside a leading California language services agency — Language World.' },
+          { icon: '🔒', title: 'HIPAA Certified', desc: 'Full HIPAA compliance training and commitment to patient privacy in every engagement.' },
+          { icon: '🩺', title: 'Medical Terminology', desc: 'Deep fluency in Spanish and English medical terminology across specialties.' },
+          { icon: '⚖️', title: 'Code of Ethics', desc: 'Commitment to accuracy, confidentiality, impartiality, and professional boundaries.' },
+          { icon: '🌎', title: 'Cultural Competency', desc: 'Culturally responsive communication that honors the full context of patients\' lives.' },
+        ].map(c => (
+          <div class="bg-white rounded-2xl p-6 border border-mist shadow-sm">
+            <div class="text-3xl mb-4">{c.icon}</div>
+            <h3 class="font-medium text-deep-forest mb-2">{c.title}</h3>
+            <p class="text-sm text-bark/70 leading-relaxed">{c.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION STATEMENT -->
+  <section class="max-w-3xl mx-auto px-6 py-20 text-center">
+    <p class="text-xs tracking-[4px] uppercase text-earth mb-6 font-body">The Mi Voz Mission</p>
+    <h2 class="font-display text-3xl text-deep-forest mb-6">
+      Language should never stand between<br/>
+      <span class="italic text-clay">a patient and their care.</span>
+    </h2>
+    <p class="text-bark/70 leading-relaxed mb-10 max-w-xl mx-auto">
+      Every person deserves to walk out of a medical appointment feeling informed, respected,
+      and heard — regardless of what language they speak. That belief is the foundation of
+      everything Mi Voz does.
+    </p>
+    <a href="/contact" class="inline-block bg-clay text-white font-medium px-8 py-4 rounded-full hover:bg-earth transition-colors">
+      Work With Michelle →
+    </a>
+  </section>
+
+</Layout>
