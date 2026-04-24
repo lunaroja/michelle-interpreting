@@ -40,13 +40,41 @@ const {
         <a href="/about" class="text-sm text-mist hover:text-clay transition-colors">About</a>
       </nav>
 
-      <!-- CTA -->
-      <a href="/contact"
-         class="bg-clay text-white text-sm font-medium px-5 py-2.5 rounded-full hover:bg-earth transition-colors whitespace-nowrap">
-        Book a Session
-      </a>
+      <div class="flex items-center gap-3">
+        <!-- CTA -->
+        <a href="/contact"
+           class="bg-clay text-white text-sm font-medium px-5 py-2.5 rounded-full hover:bg-earth transition-colors whitespace-nowrap">
+          Book a Session
+        </a>
+        <!-- Hamburger -->
+        <button id="menu-toggle" aria-label="Open menu"
+                class="md:hidden flex flex-col justify-center items-center gap-1.5 w-8 h-8">
+          <span class="block w-5 h-px bg-mist transition-all"></span>
+          <span class="block w-5 h-px bg-mist transition-all"></span>
+          <span class="block w-5 h-px bg-mist transition-all"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-deep-forest border-t border-forest/40">
+      <nav class="max-w-6xl mx-auto px-6 py-4 flex flex-col gap-4">
+        <a href="/" class="text-sm text-mist hover:text-clay transition-colors py-1">Home</a>
+        <a href="/services" class="text-sm text-mist hover:text-clay transition-colors py-1">Services</a>
+        <a href="/providers" class="text-sm text-mist hover:text-clay transition-colors py-1">For Providers</a>
+        <a href="/about" class="text-sm text-mist hover:text-clay transition-colors py-1">About</a>
+        <a href="/contact" class="text-sm text-mist hover:text-clay transition-colors py-1">Contact</a>
+      </nav>
     </div>
   </header>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+    toggle?.addEventListener('click', () => {
+      menu?.classList.toggle('hidden');
+    });
+  </script>
 
   <!-- MAIN -->
   <main>
