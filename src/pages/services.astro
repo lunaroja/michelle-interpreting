@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 ---
-<Layout title="Services" description="Spanish medical interpreting services — on-site, video, phone, and document translation. HIPAA-compliant and certified.">
+<Layout title="Services" description="Spanish medical interpreting with a specialty in behavioral health. On-site, video, phone, and document translation — HIPAA-compliant and certified.">
 
   <!-- HERO -->
   <section class="bg-deep-forest py-24 relative overflow-hidden">
@@ -12,9 +12,60 @@ import Layout from '../layouts/Layout.astro';
       <p class="text-xs tracking-[4px] uppercase text-clay mb-4 font-body">What We Offer</p>
       <h1 class="font-display text-5xl text-cream mb-6">Our Services</h1>
       <p class="text-mist/80 max-w-xl leading-relaxed">
-        Flexible, professional Spanish interpreting across all modalities — designed to fit
-        your workflow and your patients' needs.
+        Certified Spanish medical interpreting with a specialty in behavioral health —
+        available on-site in the Diablo Valley and remotely anywhere in the US.
       </p>
+    </div>
+  </section>
+
+  <!-- BEHAVIORAL HEALTH SPECIALTY -->
+  <section class="bg-cream py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <p class="text-xs tracking-[4px] uppercase text-clay mb-4 font-body">Specialty Focus</p>
+          <h2 class="font-display text-3xl md:text-4xl text-deep-forest mb-6 leading-snug">
+            Behavioral health interpreting<br/>
+            <span class="italic">done with care.</span>
+          </h2>
+          <p class="text-bark/70 leading-relaxed mb-4">
+            Mental health and behavioral health sessions demand more than language fluency.
+            They require emotional sensitivity, trauma-informed presence, and the ability to
+            convey nuance — tone, affect, hesitation — not just words.
+          </p>
+          <p class="text-bark/70 leading-relaxed mb-4">
+            Michelle's primary focus is behavioral health interpreting. She brings specialized
+            experience supporting Spanish-speaking patients in therapy, psychiatry, substance
+            use treatment, and crisis settings — where accurate, compassionate communication
+            can make a profound difference.
+          </p>
+          <p class="text-bark/70 leading-relaxed mb-8">
+            She understands the cultural context that shapes how patients describe their
+            mental health, and she knows how to hold space for difficult conversations with
+            professionalism and care.
+          </p>
+          <a href="/contact"
+             class="inline-block bg-clay text-white font-medium px-7 py-3 rounded-full hover:bg-earth transition-colors">
+            Book a Behavioral Health Session →
+          </a>
+        </div>
+        <div class="space-y-4">
+          {[
+            { icon: '🧠', title: 'Therapy & Counseling', desc: 'Individual, group, and family therapy sessions — where trust, nuance, and emotional accuracy are everything.' },
+            { icon: '💊', title: 'Psychiatry & Medication Management', desc: 'Psychiatric evaluations, medication consultations, and follow-up appointments.' },
+            { icon: '🌿', title: 'Substance Use & Recovery', desc: 'Intake assessments, treatment planning, and support group facilitation for Spanish-speaking patients.' },
+            { icon: '🆘', title: 'Crisis Intervention', desc: 'Sensitive, accurate support during crisis evaluations, safety planning, and emergency mental health situations.' },
+          ].map(item => (
+            <div class="bg-white rounded-xl p-5 border border-mist shadow-sm flex gap-4 items-start">
+              <span class="text-2xl mt-0.5 flex-shrink-0">{item.icon}</span>
+              <div>
+                <h3 class="font-medium text-deep-forest text-sm mb-1">{item.title}</h3>
+                <p class="text-xs text-bark/60 leading-relaxed">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   </section>
 
@@ -43,7 +94,7 @@ import Layout from '../layouts/Layout.astro';
       <div class="bg-mist/30 rounded-2xl p-10 border border-mist">
         <h3 class="font-body font-medium text-deep-forest mb-4 text-sm uppercase tracking-widest">Best For</h3>
         <ul class="space-y-3">
-          {['Complex medical consultations', 'Informed consent discussions', 'Mental health & behavioral health', 'Surgical pre/post appointments', 'Pediatric visits with families', 'Annual wellness exams'].map(item => (
+          {['Therapy, psychiatry & counseling', 'Crisis intervention & safety planning', 'Substance use & recovery programs', 'Informed consent discussions', 'Complex medical consultations', 'Pediatric visits with families'].map(item => (
             <li class="flex items-center gap-3 text-sm text-bark">
               <span class="w-1.5 h-1.5 rounded-full bg-clay inline-block flex-shrink-0"></span>
               {item}
@@ -60,7 +111,7 @@ import Layout from '../layouts/Layout.astro';
       <div class="order-2 md:order-1 bg-mist/30 rounded-2xl p-10 border border-mist">
         <h3 class="font-body font-medium text-deep-forest mb-4 text-sm uppercase tracking-widest">Best For</h3>
         <ul class="space-y-3">
-          {['Telehealth & virtual appointments', 'Multi-site healthcare systems', 'Follow-up consultations', 'Remote patient monitoring', 'Specialist referral calls', 'Insurance & billing discussions'].map(item => (
+          {['Telehealth behavioral health sessions', 'Virtual therapy & psychiatry visits', 'Multi-site healthcare systems', 'Follow-up consultations', 'Specialist referral calls', 'Remote patient monitoring'].map(item => (
             <li class="flex items-center gap-3 text-sm text-bark">
               <span class="w-1.5 h-1.5 rounded-full bg-clay inline-block flex-shrink-0"></span>
               {item}
