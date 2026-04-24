@@ -125,10 +125,10 @@ import Layout from '../layouts/Layout.astro';
     </h2>
     <div class="grid md:grid-cols-2 gap-x-16 gap-y-10">
       {[
-        { num: '01', title: 'Agency Quality, Independent Pricing', desc: 'Michelle trained inside a major language services agency. You get that expertise without paying for their overhead and markups.' },
-        { num: '02', title: 'One Dedicated Interpreter', desc: 'No random dispatch. Healthcare organizations work with the same interpreter who learns the rhythms of their practice.' },
-        { num: '03', title: 'HIPAA-Compliant & Certified', desc: 'Full compliance, medical terminology expertise, and professional ethics — everything required to meet language access obligations.' },
-        { num: '04', title: 'Mission-Driven', desc: 'Michelle believes every patient deserves a voice. That purpose shows up in every single session — for patients and providers alike.' },
+        { num: '13+', title: 'Years of Professional Experience', desc: 'Over a decade serving major health systems including UCSF Health, John Muir Health, Kaiser Permanente, and community nonprofits across the Bay Area.' },
+        { num: 'CMI', title: 'Certified Medical Interpreter', desc: 'Nationally certified with deep expertise in behavioral health, medical terminology, and HIPAA-compliant practice.' },
+        { num: '01', title: 'One Dedicated Interpreter', desc: 'No random dispatch. Healthcare organizations work with the same interpreter who learns the rhythms of their practice.' },
+        { num: '02', title: 'Mission-Driven', desc: 'Michelle believes every patient deserves a voice. That purpose shows up in every single session — for patients and providers alike.' },
       ].map(d => (
         <div class="flex gap-5">
           <span class="font-display text-4xl text-mist leading-none mt-1 min-w-[2.5rem]">{d.num}</span>
@@ -155,8 +155,9 @@ import Layout from '../layouts/Layout.astro';
           for themselves — a bridge between who they are and the care they deserve.
         </p>
         <p class="text-mist/80 leading-relaxed mb-8 text-sm">
-          Based in Walnut Creek, CA, Michelle is a Certified Medical Interpreter serving the
-          Diablo Valley in person and patients and providers anywhere in the US remotely.
+          With over 13 years of experience, Michelle has worked with UCSF Health, John Muir Health,
+          Kaiser Permanente, and community nonprofits across the Bay Area — with a specialty focus in
+          behavioral health interpreting.
         </p>
         <a href="/about"
            class="inline-block border border-clay text-clay text-sm font-medium px-6 py-3 rounded-full hover:bg-clay hover:text-white transition-colors">
@@ -169,6 +170,18 @@ import Layout from '../layouts/Layout.astro';
           <div class="text-5xl mb-3">👤</div>
           <p class="text-xs tracking-[3px] uppercase text-sage">Photo Coming Soon</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUSTED BY -->
+  <section class="bg-cream py-14">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <p class="text-xs tracking-[4px] uppercase text-earth mb-8 font-body">Trusted by Leading Healthcare Organizations</p>
+      <div class="flex flex-wrap justify-center items-center gap-6 md:gap-12">
+        {['UCSF Health', 'John Muir Health', 'Kaiser Permanente', 'RotaCare Bay Area'].map(org => (
+          <span class="font-display text-lg text-deep-forest/50 hover:text-deep-forest transition-colors">{org}</span>
+        ))}
       </div>
     </div>
   </section>

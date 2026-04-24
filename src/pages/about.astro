@@ -14,9 +14,17 @@ import Layout from '../layouts/Layout.astro';
         <h1 class="font-display text-5xl text-cream mb-6 leading-tight">
           Meet <span class="italic text-clay">Michelle.</span>
         </h1>
-        <p class="text-mist/80 leading-relaxed text-lg">
-          Certified medical interpreter. Passionate advocate. The voice for patients who need one most.
+        <p class="text-mist/80 leading-relaxed text-lg mb-6">
+          Certified Medical Interpreter. Behavioral health specialist. The voice for patients who need one most.
         </p>
+        <div class="flex flex-wrap gap-6">
+          {[['13+', 'Years of experience'], ['CMI', 'Certified Medical Interpreter'], ['100%', 'HIPAA compliant']].map(([stat, label]) => (
+            <div>
+              <p class="font-display text-3xl text-clay leading-none">{stat}</p>
+              <p class="text-xs tracking-[2px] uppercase text-sage mt-1">{label}</p>
+            </div>
+          ))}
+        </div>
       </div>
       <!-- Photo placeholder -->
       <div class="bg-forest/40 rounded-2xl aspect-square max-w-sm mx-auto md:mx-0 w-full flex items-center justify-center border border-forest">
@@ -48,11 +56,11 @@ import Layout from '../layouts/Layout.astro';
       </blockquote>
 
       <p class="text-bark/80 leading-relaxed">
-        Based in Walnut Creek, CA, Michelle is a Certified Medical Interpreter serving the
-        Diablo Valley in person and patients and providers anywhere in the US by video or phone.
-        After professional experience at Language World, a leading California language services
-        agency, she brings that same expertise with the added benefit of a personal, dedicated
-        relationship that no large agency can replicate.
+        With over 13 years of professional experience, Michelle is a Certified Medical Interpreter
+        based in Walnut Creek, CA. She has worked with major health systems including UCSF Health,
+        John Muir Health, and Kaiser Permanente, as well as community-focused nonprofits like
+        RotaCare Bay Area. She serves the Diablo Valley in person and patients and providers
+        anywhere in the US by video or phone.
       </p>
 
       <p class="text-bark/80 leading-relaxed">
@@ -93,6 +101,36 @@ import Layout from '../layouts/Layout.astro';
         ))}
       </div>
     </div>
+  </section>
+
+  <!-- ORGANIZATIONS -->
+  <section class="max-w-6xl mx-auto px-6 py-20">
+    <p class="text-xs tracking-[4px] uppercase text-earth mb-4 font-body">Experience</p>
+    <h2 class="font-display text-3xl text-deep-forest mb-4">
+      13+ years. Trusted by leading <span class="italic">healthcare organizations.</span>
+    </h2>
+    <p class="text-bark/70 leading-relaxed mb-12 max-w-2xl">
+      Michelle has provided certified Spanish interpreting across major health systems and
+      community nonprofits throughout the Bay Area — bringing the same standard of care
+      to every organization, regardless of size.
+    </p>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+      {[
+        { name: 'UCSF Health', type: 'Academic Medical Center', icon: '🏥' },
+        { name: 'John Muir Health', type: 'Regional Health System', icon: '🏥' },
+        { name: 'Kaiser Permanente', type: 'Integrated Health System', icon: '🏥' },
+        { name: 'RotaCare Bay Area', type: 'Nonprofit Free Clinic', icon: '🌿' },
+      ].map(org => (
+        <div class="bg-cream rounded-2xl p-6 border border-mist text-center">
+          <div class="text-3xl mb-3">{org.icon}</div>
+          <h3 class="font-display font-semibold text-deep-forest text-base mb-1">{org.name}</h3>
+          <p class="text-xs text-earth tracking-wide">{org.type}</p>
+        </div>
+      ))}
+    </div>
+    <p class="text-sm text-bark/50 italic text-center">
+      Plus additional community health centers, behavioral health programs, and nonprofits throughout the Bay Area.
+    </p>
   </section>
 
   <!-- MISSION STATEMENT -->
