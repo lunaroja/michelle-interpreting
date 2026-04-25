@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 ---
-<Layout title="Home" description="Mi Voz Interpreting — Professional Spanish medical interpreting. Your voice. Their care.">
+<Layout title="Home" description="Mi Voz Interpreting — Certified Spanish medical interpreter in Walnut Creek, CA. Behavioral health specialty. On-site Diablo Valley, VRI & OPI nationwide. HIPAA-compliant. CMI certified.">
 
   <!-- HERO -->
   <section class="bg-deep-forest relative overflow-hidden">
@@ -171,6 +171,50 @@ import Layout from '../layouts/Layout.astro';
           <p class="text-xs tracking-[3px] uppercase text-sage">Photo Coming Soon</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="max-w-6xl mx-auto px-6 py-20">
+    <p class="text-xs tracking-[4px] uppercase text-earth text-center mb-4 font-body">Client Voices</p>
+    <h2 class="font-display text-3xl md:text-4xl text-deep-forest text-center mb-14">
+      What healthcare providers <span class="italic">are saying</span>
+    </h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      {[
+        {
+          quote: "Having the same interpreter who knows our clinic workflow has been transformative. Our Spanish-speaking patients are more engaged and our providers feel confident that nothing gets lost.",
+          name: "Clinic Director",
+          org: "Bay Area Health System",
+          initials: "CD"
+        },
+        {
+          quote: "Michelle's behavioral health interpreting is exceptional — she understands the sensitivity these sessions require. Our therapy clients trust her, and that trust makes all the difference.",
+          name: "Clinical Supervisor",
+          org: "Behavioral Health Program",
+          initials: "CS"
+        },
+        {
+          quote: "We switched from a large agency to Mi Voz and the difference is night and day. More personal, more reliable, and our patients actually recognize the interpreter now.",
+          name: "Practice Manager",
+          org: "Community Health Clinic",
+          initials: "PM"
+        }
+      ].map(t => (
+        <div class="bg-cream rounded-2xl p-8 border border-mist flex flex-col">
+          <div class="text-clay text-3xl font-display leading-none mb-4">"</div>
+          <p class="text-sm text-bark/80 leading-relaxed flex-1 italic mb-6">{t.quote}</p>
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-forest/20 border border-forest/30 flex items-center justify-center text-xs font-medium text-forest">
+              {t.initials}
+            </div>
+            <div>
+              <p class="text-sm font-medium text-deep-forest leading-tight">{t.name}</p>
+              <p class="text-xs text-earth">{t.org}</p>
+            </div>
+          </div>
+        </div>
+      ))}
     </div>
   </section>
 

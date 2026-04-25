@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 ---
-<Layout title="For Providers" description="HIPAA-compliant Spanish medical interpreting for hospitals, clinics, agencies and staffing firms. Certified, affordable, dedicated.">
+<Layout title="For Providers" description="Certified Spanish medical interpreter for hospitals, clinics, and agencies in Walnut Creek and the Bay Area. HIPAA-compliant, CMI certified. Significantly below LanguageLine and agency rates.">
 
   <!-- HERO -->
   <section class="bg-deep-forest py-24 relative overflow-hidden">
@@ -130,6 +130,120 @@ import Layout from '../layouts/Layout.astro';
           For your patients, that consistency matters enormously. A familiar face (or voice) reduces
           anxiety and builds the trust that leads to better health outcomes.
         </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING TRANSPARENCY -->
+  <section class="bg-cream py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <p class="text-xs tracking-[4px] uppercase text-earth mb-4 font-body text-center">Transparent Pricing</p>
+      <h2 class="font-display text-3xl md:text-4xl text-deep-forest text-center mb-4">
+        No hidden fees. No <span class="italic">per-minute surprises.</span>
+      </h2>
+      <p class="text-bark/70 text-center mb-14 max-w-xl mx-auto text-sm leading-relaxed">
+        Large agencies charge $3.95–$4.95/minute — that's $237–$297 per hour just for phone and video access.
+        Mi Voz offers straightforward hourly rates with no dispatch fees, no markups, and no minimums for established clients.
+      </p>
+      <div class="grid md:grid-cols-3 gap-6 mb-12">
+        {[
+          {
+            label: 'On-Site Interpreting',
+            icon: '🏥',
+            note: 'Diablo Valley & Bay Area',
+            features: ['Flexible hourly scheduling', 'No agency dispatch fee', 'Same interpreter every time', 'Travel included in service area'],
+            cta: 'Get On-Site Quote'
+          },
+          {
+            label: 'Video Remote (VRI)',
+            icon: '🎥',
+            note: 'Available nationwide',
+            features: ['Telehealth-ready setup', 'Zoom, Teams, Doxy.me', 'Behavioral health specialty', 'Scheduled & recurring available'],
+            cta: 'Get VRI Quote'
+          },
+          {
+            label: 'Phone Interpreting',
+            icon: '📞',
+            note: 'Available nationwide',
+            features: ['Pre-scheduled appointments', 'Urgent & follow-up calls', 'On-demand availability discussed', 'Per-session or retainer options'],
+            cta: 'Get OPI Quote'
+          }
+        ].map(p => (
+          <div class="bg-white rounded-2xl p-8 border border-mist shadow-sm">
+            <div class="text-3xl mb-4">{p.icon}</div>
+            <h3 class="font-display text-xl text-deep-forest mb-1">{p.label}</h3>
+            <p class="text-xs text-earth tracking-wide mb-5">{p.note}</p>
+            <ul class="space-y-2 mb-6">
+              {p.features.map(f => (
+                <li class="flex items-center gap-3 text-sm text-bark/70">
+                  <span class="text-clay">✓</span> {f}
+                </li>
+              ))}
+            </ul>
+            <a href="/contact"
+               class="inline-block w-full text-center bg-deep-forest text-cream text-sm font-medium px-5 py-3 rounded-full hover:bg-forest transition-colors">
+              {p.cta} →
+            </a>
+          </div>
+        ))}
+      </div>
+      <div class="bg-deep-forest rounded-2xl p-8 md:p-10 text-center max-w-2xl mx-auto">
+        <p class="text-clay text-xs tracking-[3px] uppercase mb-3 font-body">For Regular Engagements</p>
+        <h3 class="font-display text-2xl text-cream mb-4">Retainer & contract arrangements available</h3>
+        <p class="text-mist/80 text-sm leading-relaxed mb-6">
+          Clinics and health systems with consistent interpreting needs can set up a custom service agreement
+          — preferred scheduling, dedicated availability, and rates that reflect the partnership.
+        </p>
+        <a href="/contact" class="inline-block bg-clay text-white font-medium px-7 py-3 rounded-full hover:bg-earth transition-colors">
+          Discuss a Custom Arrangement →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CENTRAL VALLEY -->
+  <section class="max-w-6xl mx-auto px-6 py-20">
+    <div class="grid md:grid-cols-2 gap-14 items-center">
+      <div>
+        <p class="text-xs tracking-[4px] uppercase text-earth mb-4 font-body">Serving Beyond the Bay Area</p>
+        <h2 class="font-display text-3xl md:text-4xl text-deep-forest mb-6 leading-snug">
+          Central Valley providers:<br/>
+          <span class="italic text-clay">Mi Voz is available.</span>
+        </h2>
+        <p class="text-bark/70 leading-relaxed mb-4 text-sm">
+          Fresno, Stockton, Modesto, Merced, and the broader Central Valley are home to one of
+          California's largest Spanish-speaking populations — and some of the most underserved healthcare
+          interpreting markets in the state.
+        </p>
+        <p class="text-bark/70 leading-relaxed mb-8 text-sm">
+          Via video remote interpreting (VRI) and over-the-phone (OPI), Mi Voz can serve Central Valley
+          clinics, FQHCs, and behavioral health programs with the same certified, professional standard as
+          Bay Area clients — at rates well below the national platforms.
+        </p>
+        <div class="flex flex-wrap gap-2 mb-8">
+          {['Fresno', 'Stockton', 'Modesto', 'Merced', 'Visalia', 'Bakersfield'].map(city => (
+            <span class="text-xs font-medium bg-mist/60 text-deep-forest px-3 py-1.5 rounded-full border border-mist">{city}</span>
+          ))}
+        </div>
+        <a href="/central-valley"
+           class="inline-block bg-clay text-white font-medium px-7 py-3 rounded-full hover:bg-earth transition-colors">
+          Learn About Central Valley Services →
+        </a>
+      </div>
+      <div class="bg-cream rounded-2xl p-10 border border-mist space-y-5">
+        <h3 class="font-body font-medium text-deep-forest text-sm uppercase tracking-widest mb-6">Why VRI works for the Central Valley</h3>
+        {[
+          { icon: '✓', text: 'Same certified interpreter — not a random dispatch from a national platform' },
+          { icon: '✓', text: 'Behavioral health specialty for mental health and substance use clinics' },
+          { icon: '✓', text: 'Significantly below LanguageLine & Boostlingo per-minute rates' },
+          { icon: '✓', text: 'Telehealth-ready — Zoom, Teams, Doxy.me, or your existing platform' },
+          { icon: '✓', text: 'Spanish-first focus — not a 240-language platform staffed by generalists' },
+        ].map(i => (
+          <div class="flex items-start gap-4">
+            <span class="text-clay font-bold mt-0.5 flex-shrink-0">{i.icon}</span>
+            <p class="text-sm text-bark/70 leading-relaxed">{i.text}</p>
+          </div>
+        ))}
       </div>
     </div>
   </section>

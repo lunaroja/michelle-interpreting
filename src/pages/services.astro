@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 ---
-<Layout title="Services" description="Spanish medical interpreting with a specialty in behavioral health. On-site, video, phone, and document translation — HIPAA-compliant and certified.">
+<Layout title="Services" description="Certified Spanish medical interpreting services in Walnut Creek, Diablo Valley, and nationwide via VRI and OPI. Behavioral health specialty. HIPAA-compliant. CMI certified.">
 
   <!-- HERO -->
   <section class="bg-deep-forest py-24 relative overflow-hidden">
@@ -202,6 +202,50 @@ import Layout from '../layouts/Layout.astro';
         <a href="/contact" class="inline-block bg-clay text-white text-sm font-medium px-6 py-3 rounded-full hover:bg-earth transition-colors">
           Request Translation →
         </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE AREA -->
+  <section class="bg-deep-forest py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <p class="text-xs tracking-[4px] uppercase text-clay mb-4 font-body text-center">Where We Serve</p>
+      <h2 class="font-display text-3xl md:text-4xl text-cream text-center mb-4">
+        Local presence. <span class="italic text-clay">Nationwide reach.</span>
+      </h2>
+      <p class="text-mist/80 text-center mb-14 max-w-xl mx-auto text-sm leading-relaxed">
+        Mi Voz provides on-site interpreting throughout the Diablo Valley and Bay Area — and serves
+        providers anywhere in the US via video and phone.
+      </p>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-forest/30 rounded-2xl p-8 border border-forest/40">
+          <p class="text-xs tracking-[3px] uppercase text-clay mb-3 font-body">On-Site Service Area</p>
+          <h3 class="font-display text-xl text-cream mb-4">Diablo Valley & Bay Area</h3>
+          <p class="text-mist/80 text-sm leading-relaxed mb-5">
+            Available in-person at clinics, hospitals, and offices throughout the Bay Area.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            {['Walnut Creek', 'Concord', 'Pleasant Hill', 'Martinez', 'Antioch', 'Brentwood', 'Pittsburg', 'Oakland', 'Berkeley'].map(city => (
+              <span class="text-xs bg-forest/50 text-cream/80 border border-forest px-3 py-1 rounded-full">{city}</span>
+            ))}
+          </div>
+        </div>
+        <div class="bg-forest/30 rounded-2xl p-8 border border-forest/40">
+          <p class="text-xs tracking-[3px] uppercase text-clay mb-3 font-body">Remote Service — VRI & OPI</p>
+          <h3 class="font-display text-xl text-cream mb-4">Nationwide, Including Central Valley</h3>
+          <p class="text-mist/80 text-sm leading-relaxed mb-5">
+            Video and phone interpreting available anywhere in the US — with a focus on underserved
+            Central Valley communities.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            {['Fresno', 'Stockton', 'Modesto', 'Merced', 'Visalia', 'Bakersfield', 'All 50 States'].map(city => (
+              <span class="text-xs bg-forest/50 text-cream/80 border border-forest px-3 py-1 rounded-full">{city}</span>
+            ))}
+          </div>
+          <a href="/central-valley" class="inline-block mt-5 text-xs text-clay hover:text-clay/80 underline underline-offset-2">
+            Central Valley providers — learn more →
+          </a>
+        </div>
       </div>
     </div>
   </section>

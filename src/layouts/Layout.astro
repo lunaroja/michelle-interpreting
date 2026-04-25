@@ -19,6 +19,43 @@ const {
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="canonical" href={`https://mivozinterpreting.com${Astro.url.pathname}`} />
+  <!-- Local Business structured data -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Mi Voz Interpreting",
+    "description": "Certified Spanish medical interpreting — on-site, video remote (VRI), and over-the-phone (OPI). Specializing in behavioral health. HIPAA-compliant.",
+    "url": "https://mivozinterpreting.com",
+    "telephone": "+1-555-000-0000",
+    "email": "hello@mivozinterpreting.com",
+    "image": "https://mivozinterpreting.com/og-image.jpg",
+    "founder": { "@type": "Person", "name": "Michelle", "jobTitle": "Certified Medical Interpreter (CMI)" },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Walnut Creek",
+      "addressRegion": "CA",
+      "addressCountry": "US"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Walnut Creek" },
+      { "@type": "City", "name": "Concord" },
+      { "@type": "City", "name": "Antioch" },
+      { "@type": "City", "name": "Pleasant Hill" },
+      { "@type": "City", "name": "Martinez" },
+      { "@type": "City", "name": "Fresno" },
+      { "@type": "City", "name": "Stockton" },
+      { "@type": "AdministrativeArea", "name": "Diablo Valley" },
+      { "@type": "AdministrativeArea", "name": "Central Valley, California" }
+    ],
+    "knowsLanguage": ["en", "es"],
+    "hasCredential": [
+      { "@type": "EducationalOccupationalCredential", "credentialCategory": "CMI — Certified Medical Interpreter" }
+    ],
+    "serviceType": ["Medical Interpreting", "Behavioral Health Interpreting", "Document Translation"],
+    "priceRange": "$$",
+    "sameAs": []
+  })} />
 </head>
 <body class="bg-warm-white font-body text-bark antialiased">
 
@@ -107,6 +144,7 @@ const {
           <li><a href="/providers" class="text-sm text-mist/80 hover:text-clay transition-colors">For Providers</a></li>
           <li><a href="/about" class="text-sm text-mist/80 hover:text-clay transition-colors">About Michelle</a></li>
           <li><a href="/contact" class="text-sm text-mist/80 hover:text-clay transition-colors">Contact & Book</a></li>
+          <li><a href="/central-valley" class="text-sm text-mist/80 hover:text-clay transition-colors">Central Valley</a></li>
         </ul>
       </div>
 
@@ -117,11 +155,17 @@ const {
           <li class="text-sm text-mist/80">📞 (555) 000-0000</li>
           <li class="text-sm text-mist/80">✉️ hello@mivozinterpreting.com</li>
           <li class="text-sm text-mist/80">📍 Walnut Creek, CA · Diablo Valley</li>
-          <li class="text-sm text-mist/80 mt-1">HIPAA Compliant · Certified Medical Interpreter</li>
-          <li class="mt-4">
+          <li class="text-sm text-mist/80 mt-1">HIPAA Compliant · CMI Certified</li>
+          <li class="mt-4 flex items-center gap-3">
             <a href="/contact"
                class="inline-block bg-clay text-white text-xs font-medium px-4 py-2 rounded-full hover:bg-earth transition-colors">
               Book a Session →
+            </a>
+            <a href="https://linkedin.com/company/mi-voz-interpreting"
+               target="_blank" rel="noopener noreferrer"
+               class="text-mist/50 hover:text-clay transition-colors text-xs"
+               aria-label="Mi Voz on LinkedIn">
+              LinkedIn ↗
             </a>
           </li>
         </ul>

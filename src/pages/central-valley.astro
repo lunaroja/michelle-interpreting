@@ -1,0 +1,165 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout
+  title="Spanish Medical Interpreter — Central Valley CA"
+  description="Certified Spanish medical interpreter serving Fresno, Stockton, Modesto, and the Central Valley via video and phone. CMI certified, behavioral health specialty. HIPAA-compliant. Rates well below LanguageLine.">
+
+  <!-- HERO -->
+  <section class="bg-deep-forest py-24 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-20"
+         style="background: radial-gradient(ellipse at 70% 30%, #7A9E7E 0%, transparent 60%), radial-gradient(ellipse at 10% 80%, #C4956A 0%, transparent 50%);">
+    </div>
+    <div class="relative max-w-6xl mx-auto px-6">
+      <p class="text-xs tracking-[4px] uppercase text-clay mb-4 font-body">Serving California's Central Valley</p>
+      <h1 class="font-display text-5xl md:text-6xl text-cream mb-6 leading-tight max-w-2xl">
+        Spanish medical interpreting<br/>
+        <span class="italic text-clay">in the Central Valley.</span>
+      </h1>
+      <p class="text-mist/80 max-w-xl leading-relaxed mb-8 text-lg">
+        Certified, dedicated Spanish interpreting for clinics, FQHCs, and behavioral health programs
+        in Fresno, Stockton, Modesto, and throughout the Central Valley — via video and phone.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="/contact"
+           class="inline-block bg-clay text-white font-medium px-8 py-4 rounded-full hover:bg-earth transition-colors">
+          Request Central Valley Services →
+        </a>
+        <a href="/services"
+           class="inline-block border border-mist/40 text-mist font-medium px-8 py-4 rounded-full hover:border-clay hover:text-clay transition-colors">
+          View All Services
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CITIES SERVED -->
+  <section class="max-w-6xl mx-auto px-6 py-20">
+    <p class="text-xs tracking-[4px] uppercase text-earth mb-4 font-body">Cities & Communities Served</p>
+    <h2 class="font-display text-3xl md:text-4xl text-deep-forest mb-6">
+      The Central Valley deserves <span class="italic">certified interpreting.</span>
+    </h2>
+    <p class="text-bark/70 leading-relaxed mb-12 max-w-2xl text-sm">
+      California's Central Valley is home to one of the largest Spanish-speaking populations in the US —
+      and one of the most underserved medical interpreting markets. Mi Voz provides certified, compassionate
+      Spanish interpreting via video and phone to healthcare providers throughout the region.
+    </p>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
+      {[
+        { city: 'Fresno', note: 'Central Valley\'s largest city — clinics, hospitals, and behavioral health programs' },
+        { city: 'Stockton', note: 'High LEP population; FQHCs and community health centers' },
+        { city: 'Modesto', note: 'Stanislaus County — growing healthcare demand' },
+        { city: 'Merced', note: 'UC Merced area — underserved academic and community clinics' },
+        { city: 'Visalia', note: 'Tulare County health systems and rural clinics' },
+        { city: 'Bakersfield', note: 'Kern County — large agricultural worker community' },
+      ].map(c => (
+        <div class="bg-cream rounded-2xl p-6 border border-mist">
+          <h3 class="font-display text-lg text-deep-forest mb-2">{c.city}</h3>
+          <p class="text-sm text-bark/60 leading-relaxed">{c.note}</p>
+        </div>
+      ))}
+    </div>
+    <p class="text-sm text-bark/50 italic">
+      Don't see your city? Mi Voz provides video and phone interpreting anywhere in California and across the US.
+      <a href="/contact" class="text-clay hover:underline ml-1">Get in touch →</a>
+    </p>
+  </section>
+
+  <!-- WHY MI VOZ FOR CENTRAL VALLEY -->
+  <section class="bg-cream py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <p class="text-xs tracking-[4px] uppercase text-earth mb-4 font-body">Why Mi Voz</p>
+          <h2 class="font-display text-3xl text-deep-forest mb-6 leading-snug">
+            Not a national platform.<br/>
+            <span class="italic text-clay">A dedicated partner.</span>
+          </h2>
+          <p class="text-bark/70 leading-relaxed mb-4 text-sm">
+            National platforms like LanguageLine charge $3.95–$4.95 per minute — that's over $237 per hour —
+            and connect you with a different interpreter every time. Central Valley providers deserve better.
+          </p>
+          <p class="text-bark/70 leading-relaxed mb-4 text-sm">
+            Mi Voz is one certified interpreter — Michelle — who brings 13+ years of experience, CMI
+            credentials, and a behavioral health specialty to every session. You'll always know who you're
+            working with.
+          </p>
+          <p class="text-bark/70 leading-relaxed mb-8 text-sm">
+            For FQHCs and nonprofits with limited budgets, Mi Voz offers flexible rates that reflect the
+            mission-driven nature of your work.
+          </p>
+          <a href="/contact" class="inline-block bg-clay text-white font-medium px-7 py-3 rounded-full hover:bg-earth transition-colors">
+            Talk to Michelle →
+          </a>
+        </div>
+        <div class="space-y-4">
+          {[
+            { title: 'CMI Certified', desc: 'Nationally certified with formal medical interpreting training — not a bilingual volunteer.' },
+            { title: 'Behavioral Health Specialty', desc: 'Mental health, psychiatry, substance use, and crisis settings — a rare specialty in the Central Valley.' },
+            { title: 'HIPAA Compliant', desc: 'Full HIPAA compliance and patient privacy commitment in every session.' },
+            { title: 'Telehealth Ready', desc: 'Works on Zoom, Teams, Doxy.me, and virtually any video platform your clinic uses.' },
+            { title: 'Fair Rates', desc: 'Straightforward pricing — significantly below national agency rates, with nonprofit-friendly options.' },
+          ].map(i => (
+            <div class="flex items-start gap-4">
+              <span class="text-clay font-bold mt-0.5 flex-shrink-0">✓</span>
+              <div>
+                <h3 class="font-medium text-deep-forest text-sm mb-1">{i.title}</h3>
+                <p class="text-xs text-bark/60 leading-relaxed">{i.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEHAVIORAL HEALTH FOCUS -->
+  <section class="max-w-6xl mx-auto px-6 py-20">
+    <p class="text-xs tracking-[4px] uppercase text-earth mb-4 font-body text-center">Specialty Focus</p>
+    <h2 class="font-display text-3xl text-deep-forest text-center mb-4">
+      Behavioral health interpreting for <span class="italic">Central Valley clinics</span>
+    </h2>
+    <p class="text-bark/70 text-center mb-14 max-w-xl mx-auto text-sm leading-relaxed">
+      Mental health and substance use disorders disproportionately affect Spanish-speaking communities —
+      and quality behavioral health interpreting in the Central Valley is critically scarce.
+    </p>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      {[
+        { icon: '🧠', title: 'Therapy & Counseling', desc: 'Individual, group, and family sessions — where emotional nuance matters as much as words.' },
+        { icon: '💊', title: 'Psychiatry', desc: 'Evaluations, medication consultations, and ongoing psychiatric care.' },
+        { icon: '🌿', title: 'Substance Use & Recovery', desc: 'Intake, treatment planning, and support for Spanish-speaking patients in recovery.' },
+        { icon: '🆘', title: 'Crisis Intervention', desc: 'Accurate, sensitive support during mental health emergencies and safety planning.' },
+      ].map(i => (
+        <div class="bg-cream rounded-2xl p-6 border border-mist shadow-sm">
+          <div class="text-3xl mb-4">{i.icon}</div>
+          <h3 class="font-medium text-deep-forest text-sm mb-2">{i.title}</h3>
+          <p class="text-xs text-bark/60 leading-relaxed">{i.desc}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-deep-forest py-20 text-center">
+    <div class="max-w-2xl mx-auto px-6">
+      <p class="text-xs tracking-[4px] uppercase text-clay mb-4 font-body">Ready to Partner?</p>
+      <h2 class="font-display text-3xl md:text-4xl text-cream mb-4">
+        Bring certified interpreting to<br/>
+        <span class="italic text-clay">your Central Valley clinic.</span>
+      </h2>
+      <p class="text-mist/80 mb-8 text-sm leading-relaxed max-w-md mx-auto">
+        Whether you need scheduled VRI sessions, OPI for urgent calls, or a custom arrangement for
+        your organization — Mi Voz is ready to serve your patients.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact" class="inline-block bg-clay text-white font-medium px-8 py-4 rounded-full hover:bg-earth transition-colors">
+          Request Central Valley Services →
+        </a>
+        <a href="/providers" class="inline-block border border-mist/40 text-mist font-medium px-8 py-4 rounded-full hover:border-clay hover:text-clay transition-colors">
+          Provider Information
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
