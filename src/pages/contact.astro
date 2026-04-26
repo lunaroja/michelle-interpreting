@@ -12,8 +12,8 @@ import Layout from '../layouts/Layout.astro';
       <p class="text-xs tracking-[4px] uppercase text-clay mb-4 font-body">Get in Touch</p>
       <h1 class="font-display text-5xl text-cream mb-4">Let's work together.</h1>
       <p class="text-mist/80 max-w-lg leading-relaxed">
-        Whether you're booking a session, exploring a partnership, or just have questions —
-        reach out and Michelle will get back to you promptly.
+        Book a session directly or send a request — Michelle will confirm availability
+        within one business day.
       </p>
     </div>
   </section>
@@ -23,7 +23,20 @@ import Layout from '../layouts/Layout.astro';
 
     <!-- Form -->
     <div>
-      <h2 class="font-display text-2xl text-deep-forest mb-8">Send a message</h2>
+
+      <!-- Intro call quick-book banner -->
+      <a href="/intro" target="_blank" rel="noopener noreferrer"
+         class="flex items-center justify-between bg-clay/10 border border-clay/30 rounded-2xl p-5 mb-10 hover:bg-clay/15 transition-colors group">
+        <div>
+          <p class="text-xs tracking-[2px] uppercase text-clay font-body mb-1">Free · 30 minutes</p>
+          <p class="font-display text-lg text-deep-forest leading-snug">Book a Free Intro Call</p>
+          <p class="text-sm text-bark/60 mt-1">Schedule a quick chat with Michelle — no commitment.</p>
+        </div>
+        <span class="text-clay text-xl group-hover:translate-x-1 transition-transform flex-shrink-0 ml-4">→</span>
+      </a>
+
+      <h2 class="font-display text-2xl text-deep-forest mb-8">Request a Session</h2>
+
       <!-- Replace the action URL with your Formspree form ID: https://formspree.io -->
       <form
         method="POST"
@@ -54,26 +67,27 @@ import Layout from '../layouts/Layout.astro';
           </div>
         </div>
 
-        <div>
-          <label class="block text-xs tracking-[2px] uppercase text-earth mb-2 font-body" for="email">
-            Email Address *
-          </label>
-          <input
-            type="email" id="email" name="email" required
-            class="w-full bg-cream border border-mist rounded-xl px-4 py-3 text-sm text-bark placeholder-bark/40 focus:outline-none focus:border-sage transition-colors"
-            placeholder="jane@clinic.org"
-          />
-        </div>
-
-        <div>
-          <label class="block text-xs tracking-[2px] uppercase text-earth mb-2 font-body" for="phone">
-            Phone Number
-          </label>
-          <input
-            type="tel" id="phone" name="phone"
-            class="w-full bg-cream border border-mist rounded-xl px-4 py-3 text-sm text-bark placeholder-bark/40 focus:outline-none focus:border-sage transition-colors"
-            placeholder="(555) 000-0000"
-          />
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div>
+            <label class="block text-xs tracking-[2px] uppercase text-earth mb-2 font-body" for="email">
+              Email Address *
+            </label>
+            <input
+              type="email" id="email" name="email" required
+              class="w-full bg-cream border border-mist rounded-xl px-4 py-3 text-sm text-bark placeholder-bark/40 focus:outline-none focus:border-sage transition-colors"
+              placeholder="jane@clinic.org"
+            />
+          </div>
+          <div>
+            <label class="block text-xs tracking-[2px] uppercase text-earth mb-2 font-body" for="phone">
+              Phone Number
+            </label>
+            <input
+              type="tel" id="phone" name="phone"
+              class="w-full bg-cream border border-mist rounded-xl px-4 py-3 text-sm text-bark placeholder-bark/40 focus:outline-none focus:border-sage transition-colors"
+              placeholder="(555) 000-0000"
+            />
+          </div>
         </div>
 
         <div>
@@ -94,25 +108,102 @@ import Layout from '../layouts/Layout.astro';
           </select>
         </div>
 
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div>
+            <label class="block text-xs tracking-[2px] uppercase text-earth mb-2 font-body" for="date">
+              Preferred Date
+            </label>
+            <input
+              type="date" id="date" name="date"
+              class="w-full bg-cream border border-mist rounded-xl px-4 py-3 text-sm text-bark focus:outline-none focus:border-sage transition-colors"
+            />
+          </div>
+          <div>
+            <label class="block text-xs tracking-[2px] uppercase text-earth mb-2 font-body" for="time">
+              Preferred Time
+            </label>
+            <input
+              type="time" id="time" name="time"
+              class="w-full bg-cream border border-mist rounded-xl px-4 py-3 text-sm text-bark focus:outline-none focus:border-sage transition-colors"
+            />
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs tracking-[2px] uppercase text-earth mb-2 font-body" for="duration">
+            Session Length
+          </label>
+          <select
+            id="duration" name="duration"
+            class="w-full bg-cream border border-mist rounded-xl px-4 py-3 text-sm text-bark focus:outline-none focus:border-sage transition-colors appearance-none"
+          >
+            <option value="">Select length...</option>
+            <option value="30min">30 minutes</option>
+            <option value="1hr">1 hour</option>
+            <option value="2hr">2 hours</option>
+            <option value="half-day">Half day (4 hours)</option>
+            <option value="full-day">Full day (8 hours)</option>
+            <option value="custom">Custom / TBD</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-xs tracking-[2px] uppercase text-earth mb-2 font-body" for="format">
+            Session Format
+          </label>
+          <select
+            id="format" name="format"
+            class="w-full bg-cream border border-mist rounded-xl px-4 py-3 text-sm text-bark focus:outline-none focus:border-sage transition-colors appearance-none"
+          >
+            <option value="">Select format...</option>
+            <option value="virtual">Virtual (Video or Phone)</option>
+            <option value="in-person">In-Person (On-Site)</option>
+          </select>
+        </div>
+
+        <!-- Virtual: optional meeting link -->
+        <div id="virtual-fields" class="hidden">
+          <label class="block text-xs tracking-[2px] uppercase text-earth mb-2 font-body" for="meeting-url">
+            Meeting Link (optional)
+          </label>
+          <input
+            type="url" id="meeting-url" name="meeting_url"
+            class="w-full bg-cream border border-mist rounded-xl px-4 py-3 text-sm text-bark placeholder-bark/40 focus:outline-none focus:border-sage transition-colors"
+            placeholder="https://zoom.us/j/... or Teams link"
+          />
+        </div>
+
+        <!-- In-person: requester's location -->
+        <div id="in-person-fields" class="hidden">
+          <label class="block text-xs tracking-[2px] uppercase text-earth mb-2 font-body" for="location">
+            Appointment Address *
+          </label>
+          <input
+            type="text" id="location" name="location"
+            class="w-full bg-cream border border-mist rounded-xl px-4 py-3 text-sm text-bark placeholder-bark/40 focus:outline-none focus:border-sage transition-colors"
+            placeholder="123 Medical Center Dr, Walnut Creek, CA"
+          />
+        </div>
+
         <div>
           <label class="block text-xs tracking-[2px] uppercase text-earth mb-2 font-body" for="message">
-            Message *
+            Additional Notes
           </label>
           <textarea
-            id="message" name="message" required rows="5"
+            id="message" name="message" rows="4"
             class="w-full bg-cream border border-mist rounded-xl px-4 py-3 text-sm text-bark placeholder-bark/40 focus:outline-none focus:border-sage transition-colors resize-none"
-            placeholder="Tell me about your needs — appointment type, schedule, patient volume, or any questions you have..."
+            placeholder="Any details about the appointment, patient needs, or questions you have..."
           ></textarea>
         </div>
 
         <button
           type="submit"
           class="w-full bg-clay text-white font-medium py-4 rounded-full hover:bg-earth transition-colors text-sm tracking-wide">
-          Send Message →
+          Request a Booking →
         </button>
 
         <p class="text-xs text-bark/40 text-center">
-          Michelle typically responds within one business day.
+          Michelle will confirm availability within one business day.
         </p>
       </form>
     </div>
@@ -149,12 +240,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
 
-      <!-- Response time -->
       <div class="bg-cream rounded-2xl p-6 border border-mist">
         <h3 class="font-medium text-deep-forest mb-3">What to expect</h3>
         <ul class="space-y-3">
           {[
-            'Response within 1 business day',
+            'Confirmation within 1 business day',
             'No obligation to book after inquiry',
             'Custom quotes for regular partnerships',
             'Simple onboarding for healthcare organizations',
@@ -166,7 +256,6 @@ import Layout from '../layouts/Layout.astro';
         </ul>
       </div>
 
-      <!-- Pull quote -->
       <div class="border-l-4 border-clay pl-6">
         <p class="font-display italic text-lg text-forest leading-relaxed">
           "Every patient deserves to be heard — and every provider deserves an interpreter
@@ -178,3 +267,21 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
 </Layout>
+
+<script>
+  const formatSelect = document.getElementById('format') as HTMLSelectElement;
+  const virtualFields = document.getElementById('virtual-fields') as HTMLElement;
+  const inPersonFields = document.getElementById('in-person-fields') as HTMLElement;
+  const locationInput = document.getElementById('location') as HTMLInputElement;
+
+  formatSelect.addEventListener('change', () => {
+    const val = formatSelect.value;
+    virtualFields.classList.toggle('hidden', val !== 'virtual');
+    inPersonFields.classList.toggle('hidden', val !== 'in-person');
+    if (val === 'in-person') {
+      locationInput.setAttribute('required', '');
+    } else {
+      locationInput.removeAttribute('required');
+    }
+  });
+</script>

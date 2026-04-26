@@ -2,6 +2,9 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "framework": "astro",
+  "redirects": [
+    { "source": "/intro", "destination": "https://calendar.app.google/2UUUtz6JJ4zLQycv9", "permanent": false }
+  ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/$1" }
   ]
