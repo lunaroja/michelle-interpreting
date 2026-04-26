@@ -13,8 +13,12 @@ import Layout from '../layouts/Layout.astro';
     <div class="relative max-w-6xl mx-auto px-6">
       <p class="text-xs tracking-[4px] uppercase text-clay mb-4 font-body">On-Site Interpreting · East Bay</p>
       <h1 class="font-display text-5xl md:text-6xl text-cream mb-6 leading-tight max-w-2xl">
-        Spanish interpreting,<br/>
-        <span class="italic text-clay">in the room with you.</span>
+        Spanish interpreting<br/>
+        <span class="italic text-clay">in <span
+          id="hero-location"
+          data-locations='["Walnut Creek","Concord","Pleasant Hill","Oakland","Danville","San Ramon","Lafayette","Martinez","the East Bay","the Bay Area"]'
+          style="transition: opacity 0.35s ease-in-out;"
+        >Walnut Creek</span>.</span>
       </h1>
       <p class="text-mist/80 max-w-xl leading-relaxed mb-8 text-lg">
         Certified on-site Spanish medical interpreting throughout the East Bay and Diablo Valley —
@@ -270,3 +274,19 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
 </Layout>
+
+<script>
+  const el = document.getElementById('hero-location');
+  if (el) {
+    const locations = JSON.parse(el.dataset.locations!);
+    let idx = 0;
+    setInterval(() => {
+      el.style.opacity = '0';
+      setTimeout(() => {
+        idx = (idx + 1) % locations.length;
+        el.textContent = locations[idx];
+        el.style.opacity = '1';
+      }, 350);
+    }, 2000);
+  }
+</script>

@@ -10,10 +10,17 @@ import Layout from '../layouts/Layout.astro';
     </div>
     <div class="relative max-w-6xl mx-auto px-6 py-28 md:py-36">
       <p class="text-xs tracking-[4px] uppercase text-clay mb-6 font-body">Spanish Medical Interpreting</p>
-      <h1 class="font-display text-5xl md:text-7xl text-cream leading-tight mb-6 max-w-2xl">
+      <h1 class="font-display text-5xl md:text-7xl text-cream leading-tight mb-4 max-w-2xl">
         Your voice.<br/>
         <span class="italic text-clay">Their care.</span>
       </h1>
+      <p class="text-sm text-clay/80 tracking-wide mb-6 font-body">
+        Serving <span
+          id="hero-location"
+          data-locations='["Walnut Creek","Concord","Oakland","Danville","San Ramon","Lafayette","Pleasant Hill","Fresno","Stockton","Modesto","the East Bay","the Central Valley","California","nationwide"]'
+          style="transition: opacity 0.35s ease-in-out;"
+        >Walnut Creek</span>
+      </p>
       <p class="text-lg text-mist/80 max-w-xl leading-relaxed mb-10 font-body">
         Every patient deserves to be fully heard. Mi Voz provides certified, HIPAA-compliant
         Spanish interpreting for healthcare providers — on-site, video, and phone.
@@ -258,3 +265,19 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
 </Layout>
+
+<script>
+  const el = document.getElementById('hero-location');
+  if (el) {
+    const locations = JSON.parse(el.dataset.locations!);
+    let idx = 0;
+    setInterval(() => {
+      el.style.opacity = '0';
+      setTimeout(() => {
+        idx = (idx + 1) % locations.length;
+        el.textContent = locations[idx];
+        el.style.opacity = '1';
+      }, 350);
+    }, 2000);
+  }
+</script>
