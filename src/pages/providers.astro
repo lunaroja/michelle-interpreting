@@ -227,10 +227,16 @@ import Layout from '../layouts/Layout.astro';
             <span class="text-xs font-medium bg-mist/60 text-deep-forest px-3 py-1.5 rounded-full border border-mist">{city}</span>
           ))}
         </div>
-        <a href="/central-valley"
-           class="inline-block bg-clay text-white font-medium px-7 py-3 rounded-full hover:bg-earth transition-colors">
-          Learn About Central Valley Services →
-        </a>
+        <div class="flex flex-col sm:flex-row gap-3">
+          <a href="/central-valley"
+             class="inline-block bg-clay text-white font-medium px-7 py-3 rounded-full hover:bg-earth transition-colors">
+            Learn About Central Valley Services →
+          </a>
+          <a href="/in-person"
+             class="inline-block border border-forest text-forest font-medium px-7 py-3 rounded-full hover:bg-forest hover:text-cream transition-colors">
+            On-Site East Bay Services →
+          </a>
+        </div>
       </div>
       <div class="bg-cream rounded-2xl p-10 border border-mist space-y-5">
         <h3 class="font-body font-medium text-deep-forest text-sm uppercase tracking-widest mb-6">Why VRI works for the Central Valley</h3>

@@ -1,0 +1,272 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout
+  title="On-Site Spanish Medical Interpreter — East Bay & Diablo Valley"
+  description="Certified on-site Spanish medical interpreter serving Walnut Creek, Concord, Oakland, Danville, San Ramon, and the greater East Bay. HIPAA-compliant. CMI certified. $120/hr.">
+
+  <!-- HERO -->
+  <section class="bg-deep-forest py-24 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-20"
+         style="background: radial-gradient(ellipse at 70% 30%, #7A9E7E 0%, transparent 60%), radial-gradient(ellipse at 10% 80%, #C4956A 0%, transparent 50%);">
+    </div>
+    <div class="relative max-w-6xl mx-auto px-6">
+      <p class="text-xs tracking-[4px] uppercase text-clay mb-4 font-body">On-Site Interpreting · East Bay</p>
+      <h1 class="font-display text-5xl md:text-6xl text-cream mb-6 leading-tight max-w-2xl">
+        Spanish interpreting,<br/>
+        <span class="italic text-clay">in the room with you.</span>
+      </h1>
+      <p class="text-mist/80 max-w-xl leading-relaxed mb-8 text-lg">
+        Certified on-site Spanish medical interpreting throughout the East Bay and Diablo Valley —
+        Walnut Creek, Concord, Oakland, Danville, and beyond. Same interpreter, every time.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="/contact"
+           class="inline-block bg-clay text-white font-medium px-8 py-4 rounded-full hover:bg-earth transition-colors">
+          Book an On-Site Session →
+        </a>
+        <a href="/services"
+           class="inline-block border border-mist/40 text-mist font-medium px-8 py-4 rounded-full hover:border-clay hover:text-clay transition-colors">
+          View All Services
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CITIES SERVED -->
+  <section class="max-w-6xl mx-auto px-6 py-20">
+    <p class="text-xs tracking-[4px] uppercase text-earth mb-4 font-body">Service Area</p>
+    <h2 class="font-display text-3xl md:text-4xl text-deep-forest mb-6">
+      Serving the <span class="italic">greater East Bay</span> — in person.
+    </h2>
+    <p class="text-bark/70 leading-relaxed mb-12 max-w-2xl text-sm">
+      Michelle travels to clinics, hospitals, and healthcare facilities throughout a 40-minute radius
+      of Walnut Creek — covering the full Diablo Valley, Lamorinda, East Contra Costa, the Tri-Valley,
+      West County, and the Inner East Bay. Travel is included in the service area.
+    </p>
+
+    <div class="space-y-10 mb-12">
+
+      <!-- Diablo Valley -->
+      <div>
+        <p class="text-xs tracking-[3px] uppercase text-clay font-body mb-4">Diablo Valley</p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {[
+            { city: 'Walnut Creek', note: 'Home base — clinics, John Muir Health, and Kaiser facilities' },
+            { city: 'Concord', note: 'Contra Costa Regional Medical Center and surrounding clinics' },
+            { city: 'Pleasant Hill', note: 'Primary care, behavioral health, and specialty practices' },
+            { city: 'Martinez', note: 'County seat — Contra Costa Health Services headquarters' },
+            { city: 'Clayton', note: 'Primary and family care practices' },
+            { city: 'Alamo', note: 'Private practices and outpatient facilities' },
+            { city: 'Danville', note: 'San Ramon Valley — specialty clinics and surgical centers' },
+            { city: 'San Ramon', note: 'San Ramon Regional Medical Center and medical offices' },
+          ].map(c => (
+            <div class="bg-cream rounded-2xl p-5 border border-mist">
+              <h3 class="font-display text-base text-deep-forest mb-1">{c.city}</h3>
+              <p class="text-xs text-bark/60 leading-relaxed">{c.note}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Lamorinda -->
+      <div>
+        <p class="text-xs tracking-[3px] uppercase text-clay font-body mb-4">Lamorinda</p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {[
+            { city: 'Lafayette', note: 'Behavioral health and outpatient practices' },
+            { city: 'Moraga', note: 'Community health and family medicine' },
+            { city: 'Orinda', note: 'Primary care and specialty clinics' },
+          ].map(c => (
+            <div class="bg-cream rounded-2xl p-5 border border-mist">
+              <h3 class="font-display text-base text-deep-forest mb-1">{c.city}</h3>
+              <p class="text-xs text-bark/60 leading-relaxed">{c.note}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- East Contra Costa -->
+      <div>
+        <p class="text-xs tracking-[3px] uppercase text-clay font-body mb-4">East Contra Costa</p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {[
+            { city: 'Pittsburg', note: 'Los Medanos Community Hospital and area clinics' },
+            { city: 'Antioch', note: 'Growing healthcare corridor — primary and specialty care' },
+            { city: 'Brentwood', note: 'East County family medicine and outpatient care' },
+            { city: 'Oakley', note: 'Community health and primary care' },
+          ].map(c => (
+            <div class="bg-cream rounded-2xl p-5 border border-mist">
+              <h3 class="font-display text-base text-deep-forest mb-1">{c.city}</h3>
+              <p class="text-xs text-bark/60 leading-relaxed">{c.note}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Tri-Valley -->
+      <div>
+        <p class="text-xs tracking-[3px] uppercase text-clay font-body mb-4">Tri-Valley</p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {[
+            { city: 'Dublin', note: 'Kaiser Dublin and surrounding medical offices' },
+            { city: 'Pleasanton', note: 'ValleyCare Health System and specialty clinics' },
+            { city: 'Livermore', note: 'Tri-Valley primary care and behavioral health' },
+          ].map(c => (
+            <div class="bg-cream rounded-2xl p-5 border border-mist">
+              <h3 class="font-display text-base text-deep-forest mb-1">{c.city}</h3>
+              <p class="text-xs text-bark/60 leading-relaxed">{c.note}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- West Contra Costa -->
+      <div>
+        <p class="text-xs tracking-[3px] uppercase text-clay font-body mb-4">West Contra Costa</p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {[
+            { city: 'Richmond', note: 'Contra Costa Regional and community health centers' },
+            { city: 'San Pablo', note: 'FQHCs and community health serving high LEP population' },
+            { city: 'El Cerrito', note: 'Primary care and outpatient clinics' },
+            { city: 'Hercules', note: 'Medical offices and specialty practices' },
+            { city: 'Pinole', note: 'Community and family medicine' },
+          ].map(c => (
+            <div class="bg-cream rounded-2xl p-5 border border-mist">
+              <h3 class="font-display text-base text-deep-forest mb-1">{c.city}</h3>
+              <p class="text-xs text-bark/60 leading-relaxed">{c.note}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Inner East Bay -->
+      <div>
+        <p class="text-xs tracking-[3px] uppercase text-clay font-body mb-4">Inner East Bay</p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {[
+            { city: 'Oakland', note: 'Highland Hospital, Kaiser Oakland, UCSF Benioff, and clinics throughout the city' },
+            { city: 'Berkeley', note: 'Alta Bates Summit, LifeLong Medical, and UC Berkeley–affiliated practices' },
+            { city: 'Albany', note: 'Community health and primary care practices' },
+            { city: 'Emeryville', note: 'Specialty and outpatient medical offices' },
+          ].map(c => (
+            <div class="bg-cream rounded-2xl p-5 border border-mist">
+              <h3 class="font-display text-base text-deep-forest mb-1">{c.city}</h3>
+              <p class="text-xs text-bark/60 leading-relaxed">{c.note}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+    </div>
+
+    <p class="text-sm text-bark/50 italic">
+      Don't see your city? Reach out — if it's within a reasonable drive, Michelle can likely accommodate.
+      <a href="/contact" class="text-clay hover:underline ml-1">Get in touch →</a>
+    </p>
+  </section>
+
+  <!-- WHY IN-PERSON -->
+  <section class="bg-cream py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <p class="text-xs tracking-[4px] uppercase text-earth mb-4 font-body">Why On-Site</p>
+          <h2 class="font-display text-3xl text-deep-forest mb-6 leading-snug">
+            Some conversations need<br/>
+            <span class="italic text-clay">someone in the room.</span>
+          </h2>
+          <p class="text-bark/70 leading-relaxed mb-4 text-sm">
+            Video and phone interpreting work well for many appointments — but for complex diagnoses,
+            sensitive conversations, pediatric visits, and behavioral health sessions, physical presence
+            changes everything. Patients are more at ease. Providers can read the full clinical picture.
+          </p>
+          <p class="text-bark/70 leading-relaxed mb-4 text-sm">
+            Michelle brings the same professional standard to every on-site session —
+            certified, HIPAA-compliant, and prepared. She knows how to move through a clinical
+            environment without disrupting the flow of care.
+          </p>
+          <p class="text-bark/70 leading-relaxed mb-8 text-sm">
+            And because you're always working with Michelle — not whoever a dispatch queue assigns —
+            she builds familiarity with your practice, your staff, and your patient population over time.
+          </p>
+          <a href="/contact" class="inline-block bg-clay text-white font-medium px-7 py-3 rounded-full hover:bg-earth transition-colors">
+            Book an On-Site Session →
+          </a>
+        </div>
+        <div class="space-y-4">
+          {[
+            { title: 'Same Interpreter Every Time', desc: 'No random dispatch — Michelle learns your practice, your providers, and your patients.' },
+            { title: '$120/hour · 2-hour minimum', desc: 'Transparent, flat-rate pricing. No agency overhead, no per-minute billing surprises.' },
+            { title: 'Travel Included', desc: 'No travel surcharge within the 40-minute service area. The rate is the rate.' },
+            { title: 'CMI Certified', desc: 'Nationally certified with formal medical interpreting training — not a bilingual staff member filling in.' },
+            { title: 'HIPAA Compliant', desc: 'Full patient privacy commitment and confidentiality in every session, every setting.' },
+            { title: 'Behavioral Health Specialty', desc: 'Trained for the emotional nuance of mental health, psychiatry, and substance use appointments.' },
+          ].map(i => (
+            <div class="flex items-start gap-4">
+              <span class="text-clay font-bold mt-0.5 flex-shrink-0">✓</span>
+              <div>
+                <h3 class="font-medium text-deep-forest text-sm mb-1">{i.title}</h3>
+                <p class="text-xs text-bark/60 leading-relaxed">{i.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPOINTMENT TYPES -->
+  <section class="max-w-6xl mx-auto px-6 py-20">
+    <p class="text-xs tracking-[4px] uppercase text-earth mb-4 font-body text-center">Common On-Site Settings</p>
+    <h2 class="font-display text-3xl text-deep-forest text-center mb-4">
+      Every appointment where <span class="italic">presence matters</span>
+    </h2>
+    <p class="text-bark/70 text-center mb-14 max-w-xl mx-auto text-sm leading-relaxed">
+      On-site interpreting is especially valuable for appointments where tone, body language,
+      and emotional context are part of the clinical picture.
+    </p>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      {[
+        { icon: '🏥', title: 'Hospital Visits', desc: 'Admissions, discharge planning, surgical consultations, and inpatient care rounds.' },
+        { icon: '🧠', title: 'Behavioral Health', desc: 'Therapy, psychiatry, intake evaluations, and crisis support — where nuance is everything.' },
+        { icon: '👶', title: 'Pediatric Appointments', desc: 'Well-child visits, developmental evaluations, and specialty consultations.' },
+        { icon: '⚕️', title: 'Complex Diagnoses', desc: 'Oncology, neurology, and other high-stakes conversations that deserve full presence.' },
+        { icon: '📋', title: 'Informed Consent', desc: 'Procedure explanations, consent review, and patient rights discussions.' },
+        { icon: '💊', title: 'Medication Consultations', desc: 'Pharmacy counseling, medication management, and adherence planning.' },
+        { icon: '🌿', title: 'Substance Use & Recovery', desc: 'Intake, treatment planning, and ongoing support for patients in recovery.' },
+        { icon: '👥', title: 'Care Conferences', desc: 'Family meetings, team consultations, and interdisciplinary care coordination.' },
+      ].map(i => (
+        <div class="bg-cream rounded-2xl p-6 border border-mist shadow-sm">
+          <div class="text-3xl mb-4">{i.icon}</div>
+          <h3 class="font-medium text-deep-forest text-sm mb-2">{i.title}</h3>
+          <p class="text-xs text-bark/60 leading-relaxed">{i.desc}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-deep-forest py-20 text-center">
+    <div class="max-w-2xl mx-auto px-6">
+      <p class="text-xs tracking-[4px] uppercase text-clay mb-4 font-body">Ready to Book?</p>
+      <h2 class="font-display text-3xl md:text-4xl text-cream mb-4">
+        Certified on-site interpreting<br/>
+        <span class="italic text-clay">throughout the East Bay.</span>
+      </h2>
+      <p class="text-mist/80 mb-8 text-sm leading-relaxed max-w-md mx-auto">
+        Book a single session or discuss a recurring arrangement for your clinic or health system.
+        Michelle will confirm availability and travel within one business day.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact" class="inline-block bg-clay text-white font-medium px-8 py-4 rounded-full hover:bg-earth transition-colors">
+          Book an On-Site Session →
+        </a>
+        <a href="/providers" class="inline-block border border-mist/40 text-mist font-medium px-8 py-4 rounded-full hover:border-clay hover:text-clay transition-colors">
+          Provider Information
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
