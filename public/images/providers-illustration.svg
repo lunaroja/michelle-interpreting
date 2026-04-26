@@ -1,34 +1,49 @@
-<svg viewBox="0 0 480 380" xmlns="http://www.w3.org/2000/svg" fill="none">
-  <!-- Outer organic shield -->
-  <path d="M 240,46 C 284,46 348,66 382,97 C 418,130 424,180 415,228 C 402,290 364,336 323,360 C 296,376 267,382 240,382 C 213,382 184,376 157,360 C 116,336 78,290 65,228 C 56,180 62,130 98,97 C 132,66 196,46 240,46 Z"
-        stroke="#7A9E7E" stroke-width="1.5" opacity="0.22"/>
-  <!-- Inner shield fill + stroke -->
-  <path d="M 240,78 C 276,78 330,95 358,121 C 388,149 393,190 383,232 C 371,284 340,320 310,341 C 288,356 263,362 240,362 C 217,362 192,356 170,341 C 140,320 109,284 97,232 C 87,190 92,149 122,121 C 150,95 204,78 240,78 Z"
-        fill="#7A9E7E" opacity="0.07"/>
-  <path d="M 240,78 C 276,78 330,95 358,121 C 388,149 393,190 383,232 C 371,284 340,320 310,341 C 288,356 263,362 240,362 C 217,362 192,356 170,341 C 140,320 109,284 97,232 C 87,190 92,149 122,121 C 150,95 204,78 240,78 Z"
-        stroke="#7A9E7E" stroke-width="1.5" opacity="0.28"/>
-  <!-- Stethoscope chestpiece -->
-  <circle cx="204" cy="276" r="31" stroke="#C4956A" stroke-width="2" opacity="0.38"/>
-  <circle cx="204" cy="276" r="17" stroke="#C4956A" stroke-width="1.5" opacity="0.28"/>
-  <!-- Stethoscope tubing -->
-  <path d="M 204,245 C 205,216 218,199 240,190 C 263,181 285,184 300,199 C 315,214 316,236 306,250"
-        stroke="#C4956A" stroke-width="2.5" opacity="0.38"/>
-  <!-- Earpiece curve -->
-  <path d="M 306,250 C 298,265 285,270 273,267"
-        stroke="#C4956A" stroke-width="2.5" opacity="0.32"/>
-  <circle cx="273" cy="267" r="5.5" fill="#C4956A" opacity="0.45"/>
-  <circle cx="306" cy="250" r="5.5" fill="#C4956A" opacity="0.45"/>
-  <!-- Certification star at top -->
-  <path d="M 240,116 L 245,130 L 260,130 L 248,139 L 253,154 L 240,145 L 227,154 L 232,139 L 220,130 L 235,130 Z"
-        fill="#7A9E7E" opacity="0.32"/>
-  <!-- Leaf accents -->
-  <path d="M 143,144 C 153,128 172,129 170,144 C 168,160 151,166 143,155 C 136,147 133,160 143,144 Z"
-        fill="#7A9E7E" opacity="0.22"/>
-  <path d="M 337,144 C 327,128 308,129 310,144 C 312,160 329,166 337,155 C 344,147 347,160 337,144 Z"
-        fill="#7A9E7E" opacity="0.22"/>
-  <!-- Scattered dots -->
-  <circle cx="186" cy="100" r="4" fill="#C4956A" opacity="0.22"/>
-  <circle cx="294" cy="94" r="3.5" fill="#C4956A" opacity="0.2"/>
-  <circle cx="140" cy="234" r="3" fill="#7A9E7E" opacity="0.25"/>
-  <circle cx="340" cy="234" r="3" fill="#7A9E7E" opacity="0.25"/>
+<svg viewBox="0 0 260 230" xmlns="http://www.w3.org/2000/svg" fill="none">
+
+  <!-- CLIPBOARD -->
+  <!-- Clip/clamp at top -->
+  <rect x="98" y="10" width="64" height="28" rx="8"
+        fill="#C4956A" fill-opacity="0.25" stroke="#C4956A" stroke-width="2.5"/>
+  <!-- Clip hole -->
+  <circle cx="130" cy="24" r="9" fill="#C4956A" fill-opacity="0.12" stroke="#C4956A" stroke-width="2"/>
+
+  <!-- Clipboard body -->
+  <rect x="38" y="24" width="184" height="195" rx="10"
+        fill="#C4956A" fill-opacity="0.1" stroke="#C4956A" stroke-width="2.5"/>
+
+  <!-- Header bar inside clipboard -->
+  <rect x="52" y="46" width="156" height="24" rx="5"
+        fill="#C4956A" fill-opacity="0.2" stroke="none"/>
+  <line x1="66" y1="58" x2="178" y2="58" stroke="#C4956A" stroke-width="2" stroke-linecap="round" opacity="0.55"/>
+
+  <!-- Check item 1 -->
+  <!-- Checkmark -->
+  <path d="M 60,96 L 68,106 L 84,84" stroke="#7A9E7E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+  <!-- Text line -->
+  <line x1="96" y1="95" x2="186" y2="95" stroke="#D4E4D6" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- Check item 2 -->
+  <path d="M 60,128 L 68,138 L 84,116" stroke="#7A9E7E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+  <line x1="96" y1="127" x2="196" y2="127" stroke="#D4E4D6" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- Check item 3 -->
+  <path d="M 60,160 L 68,170 L 84,148" stroke="#7A9E7E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+  <line x1="96" y1="159" x2="172" y2="159" stroke="#D4E4D6" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- Check item 4 -->
+  <path d="M 60,192 L 68,202 L 84,180" stroke="#7A9E7E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+  <line x1="96" y1="191" x2="182" y2="191" stroke="#D4E4D6" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- CERTIFICATION BADGE (overlapping bottom-right of clipboard) -->
+  <!-- Outer seal circle -->
+  <circle cx="192" cy="186" r="38"
+          fill="#1E3D2A" stroke="#C4956A" stroke-width="2.5"/>
+  <!-- Inner circle ring -->
+  <circle cx="192" cy="186" r="28" stroke="#C4956A" stroke-width="1.5" opacity="0.6"/>
+  <!-- Star inside badge -->
+  <path d="M 192,165 L 196.5,179 L 211,179 L 199.5,187.5 L 204,202 L 192,193.5 L 180,202 L 184.5,187.5 L 173,179 L 187.5,179 Z"
+        fill="#C4956A" opacity="0.75" stroke="none"/>
+  <!-- Ribbon tails below badge -->
+  <path d="M 174,220 L 184,206 L 192,212 L 200,206 L 210,220 L 204,216 L 192,222 L 180,216 Z"
+        fill="#7A9E7E" fill-opacity="0.5" stroke="#7A9E7E" stroke-width="1.5" stroke-linejoin="round" opacity="0.65"/>
 </svg>

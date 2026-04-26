@@ -1,32 +1,48 @@
-<svg viewBox="0 0 480 380" xmlns="http://www.w3.org/2000/svg" fill="none">
-  <!-- Location radius rings -->
-  <circle cx="240" cy="148" r="152" stroke="#7A9E7E" stroke-width="0.8" opacity="0.09"/>
-  <circle cx="240" cy="148" r="108" stroke="#7A9E7E" stroke-width="1" opacity="0.13"/>
-  <circle cx="240" cy="148" r="66" stroke="#7A9E7E" stroke-width="1.2" opacity="0.19"/>
-  <!-- Location pin body — organic teardrop -->
-  <path d="M 240,48 C 274,48 298,72 298,102 C 298,132 272,162 245,178 C 243,179 237,179 235,178 C 208,162 182,132 182,102 C 182,72 206,48 240,48 Z"
-        fill="#C4956A" opacity="0.28"/>
-  <!-- Pin ring and dot -->
-  <circle cx="240" cy="102" r="23" stroke="#C4956A" stroke-width="2" opacity="0.45"/>
-  <circle cx="240" cy="102" r="9" fill="#C4956A" opacity="0.55"/>
-  <!-- Root system from pin tip -->
-  <path d="M 240,178 C 240,208 239,242 237,278" stroke="#7A9E7E" stroke-width="1.8" opacity="0.32"/>
-  <path d="M 240,222 C 220,230 196,242 170,256 C 148,268 126,282 106,294" stroke="#7A9E7E" stroke-width="1.5" opacity="0.28"/>
-  <path d="M 240,222 C 260,230 284,242 310,256 C 332,268 354,282 374,294" stroke="#7A9E7E" stroke-width="1.5" opacity="0.28"/>
-  <path d="M 188,252 C 172,259 156,264 140,268" stroke="#7A9E7E" stroke-width="1" opacity="0.2"/>
-  <path d="M 162,275 C 148,281 134,285 118,288" stroke="#7A9E7E" stroke-width="0.8" opacity="0.15"/>
-  <path d="M 292,252 C 308,259 324,264 340,268" stroke="#7A9E7E" stroke-width="1" opacity="0.2"/>
-  <path d="M 318,275 C 332,281 346,285 362,288" stroke="#7A9E7E" stroke-width="0.8" opacity="0.15"/>
-  <!-- City dots in area -->
-  <circle cx="160" cy="112" r="5" fill="#7A9E7E" opacity="0.25"/>
-  <circle cx="322" cy="96" r="4.5" fill="#7A9E7E" opacity="0.22"/>
-  <circle cx="174" cy="192" r="4" fill="#C4956A" opacity="0.2"/>
-  <circle cx="308" cy="184" r="3.5" fill="#C4956A" opacity="0.18"/>
-  <circle cx="138" cy="155" r="3" fill="#7A9E7E" opacity="0.2"/>
-  <circle cx="350" cy="150" r="3" fill="#7A9E7E" opacity="0.2"/>
-  <!-- Leaf accents flanking -->
-  <path d="M 94,115 C 102,100 120,101 118,115 C 116,130 100,135 93,124 C 87,115 86,129 94,115 Z"
-        fill="#7A9E7E" opacity="0.22"/>
-  <path d="M 386,115 C 378,100 360,101 362,115 C 364,130 380,135 387,124 C 393,115 394,129 386,115 Z"
-        fill="#7A9E7E" opacity="0.22"/>
+<svg viewBox="0 0 270 230" xmlns="http://www.w3.org/2000/svg" fill="none">
+
+  <!-- Roof (triangle) -->
+  <path d="M 25,68 L 135,12 L 245,68 Z"
+        fill="#7A9E7E" fill-opacity="0.2" stroke="#7A9E7E" stroke-width="2.5" stroke-linejoin="round"/>
+  <!-- Roof ridge cap -->
+  <rect x="122" y="10" width="26" height="12" rx="4" fill="#C4956A" opacity="0.4"/>
+
+  <!-- Building body -->
+  <rect x="35" y="66" width="200" height="145" rx="4"
+        fill="#C4956A" fill-opacity="0.1" stroke="#C4956A" stroke-width="2.5"/>
+
+  <!-- Upper windows (left and right) -->
+  <rect x="55" y="88" width="48" height="44" rx="4"
+        fill="#D4E4D6" fill-opacity="0.2" stroke="#D4E4D6" stroke-width="2" opacity="0.75"/>
+  <!-- Window cross bars -->
+  <line x1="79" y1="88" x2="79" y2="132" stroke="#D4E4D6" stroke-width="1.5" opacity="0.6"/>
+  <line x1="55" y1="110" x2="103" y2="110" stroke="#D4E4D6" stroke-width="1.5" opacity="0.6"/>
+
+  <rect x="167" y="88" width="48" height="44" rx="4"
+        fill="#D4E4D6" fill-opacity="0.2" stroke="#D4E4D6" stroke-width="2" opacity="0.75"/>
+  <line x1="191" y1="88" x2="191" y2="132" stroke="#D4E4D6" stroke-width="1.5" opacity="0.6"/>
+  <line x1="167" y1="110" x2="215" y2="110" stroke="#D4E4D6" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Medical cross (centered on upper facade) -->
+  <!-- Horizontal bar -->
+  <rect x="116" y="88" width="38" height="14" rx="3"
+        fill="#C4956A" fill-opacity="0.5" stroke="#C4956A" stroke-width="1.5"/>
+  <!-- Vertical bar -->
+  <rect x="128" y="76" width="14" height="38" rx="3"
+        fill="#C4956A" fill-opacity="0.5" stroke="#C4956A" stroke-width="1.5"/>
+
+  <!-- Door (central) -->
+  <rect x="110" y="152" width="50" height="59" rx="4"
+        fill="#7A9E7E" fill-opacity="0.18" stroke="#7A9E7E" stroke-width="2.2"/>
+  <!-- Door knob -->
+  <circle cx="120" cy="183" r="4" fill="#C4956A" opacity="0.7"/>
+
+  <!-- Steps in front of door -->
+  <line x1="103" y1="211" x2="167" y2="211" stroke="#C4956A" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
+  <line x1="97" y1="218" x2="173" y2="218" stroke="#C4956A" stroke-width="2.5" stroke-linecap="round" opacity="0.4"/>
+
+  <!-- Ground bushes -->
+  <circle cx="25" cy="200" r="16" fill="#7A9E7E" fill-opacity="0.2" stroke="#7A9E7E" stroke-width="2" opacity="0.65"/>
+  <circle cx="14" cy="208" r="11" fill="#7A9E7E" fill-opacity="0.15" stroke="#7A9E7E" stroke-width="1.5" opacity="0.55"/>
+  <circle cx="245" cy="200" r="16" fill="#7A9E7E" fill-opacity="0.2" stroke="#7A9E7E" stroke-width="2" opacity="0.65"/>
+  <circle cx="256" cy="208" r="11" fill="#7A9E7E" fill-opacity="0.15" stroke="#7A9E7E" stroke-width="1.5" opacity="0.55"/>
 </svg>

@@ -1,29 +1,22 @@
-<svg viewBox="0 0 480 380" xmlns="http://www.w3.org/2000/svg" fill="none">
-  <!-- Outer organic wave -->
-  <path d="M 240,58 C 322,54 406,110 408,190 C 410,270 336,334 254,334 C 172,334 66,278 64,198 C 62,118 158,62 240,58 Z"
-        stroke="#7A9E7E" stroke-width="1" opacity="0.13"/>
-  <!-- Middle wave -->
-  <path d="M 240,92 C 310,88 378,136 378,192 C 378,248 314,298 248,298 C 182,298 102,256 100,200 C 98,144 168,96 240,92 Z"
-        stroke="#7A9E7E" stroke-width="1.5" opacity="0.21"/>
-  <!-- Inner wave -->
-  <path d="M 240,130 C 298,126 349,162 348,194 C 347,226 298,262 248,264 C 198,266 132,234 130,200 C 128,166 180,134 240,130 Z"
-        stroke="#C4956A" stroke-width="1.8" opacity="0.3"/>
-  <!-- Central organic breath form -->
-  <path d="M 240,163 C 265,161 285,176 284,194 C 283,212 263,226 240,226 C 217,226 197,211 196,194 C 195,177 215,165 240,163 Z"
-        fill="#C4956A" opacity="0.42"/>
-  <!-- Seed dots -->
-  <circle cx="148" cy="86" r="5" fill="#C4956A" opacity="0.26"/>
-  <circle cx="344" cy="70" r="3.5" fill="#7A9E7E" opacity="0.3"/>
-  <circle cx="416" cy="212" r="4" fill="#7A9E7E" opacity="0.22"/>
-  <circle cx="352" cy="320" r="5.5" fill="#C4956A" opacity="0.17"/>
-  <circle cx="62" cy="232" r="3" fill="#7A9E7E" opacity="0.2"/>
-  <circle cx="232" cy="44" r="3.5" fill="#D4E4D6" opacity="0.38"/>
-  <!-- Leaf pair at top -->
-  <path d="M 216,46 C 220,33 235,32 235,46 C 235,59 219,64 213,57 C 208,50 212,59 216,46 Z"
-        fill="#7A9E7E" opacity="0.28"/>
-  <path d="M 264,46 C 260,33 245,32 245,46 C 245,59 261,64 267,57 C 272,50 268,59 264,46 Z"
-        fill="#7A9E7E" opacity="0.22"/>
-  <!-- Small leaf bottom right -->
-  <path d="M 388,302 C 398,288 416,290 414,305 C 412,320 396,324 388,314 C 381,306 378,316 388,302 Z"
-        fill="#C4956A" opacity="0.18"/>
+<svg viewBox="0 0 260 230" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <!-- Large speech bubble (main, clay) with tail pointing down-left -->
+  <path d="M 26,10 L 185,10 Q 202,10 202,27 L 202,110 Q 202,127 185,127 L 72,127 L 48,155 L 40,127 L 26,127 Q 9,127 9,110 L 9,27 Q 9,10 26,10 Z"
+        fill="#C4956A" fill-opacity="0.18" stroke="#C4956A" stroke-width="2.5" stroke-linejoin="round"/>
+  <!-- Text lines inside large bubble -->
+  <line x1="30" y1="52" x2="140" y2="52" stroke="#F5F0E8" stroke-width="3" stroke-linecap="round" opacity="0.75"/>
+  <line x1="30" y1="72" x2="165" y2="72" stroke="#F5F0E8" stroke-width="3" stroke-linecap="round" opacity="0.75"/>
+  <line x1="30" y1="92" x2="115" y2="92" stroke="#F5F0E8" stroke-width="3" stroke-linecap="round" opacity="0.75"/>
+
+  <!-- Small speech bubble (response, sage) with tail pointing up-right -->
+  <path d="M 76,122 L 175,122 L 196,100 L 222,122 L 238,122 Q 252,122 252,136 L 252,204 Q 252,218 238,218 L 76,218 Q 62,218 62,204 L 62,136 Q 62,122 76,122 Z"
+        fill="#7A9E7E" fill-opacity="0.15" stroke="#7A9E7E" stroke-width="2" stroke-linejoin="round"/>
+  <!-- Text lines inside small bubble -->
+  <line x1="80" y1="155" x2="195" y2="155" stroke="#D4E4D6" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+  <line x1="80" y1="175" x2="228" y2="175" stroke="#D4E4D6" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+  <line x1="80" y1="195" x2="165" y2="195" stroke="#D4E4D6" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- Small floating dots -->
+  <circle cx="228" cy="22" r="4.5" fill="#C4956A" opacity="0.4"/>
+  <circle cx="246" cy="46" r="3" fill="#7A9E7E" opacity="0.38"/>
+  <circle cx="14" cy="188" r="3.5" fill="#7A9E7E" opacity="0.3"/>
 </svg>
