@@ -1,0 +1,32 @@
+<svg viewBox="0 0 480 380" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <!-- Signal rings — slightly organic, not perfect circles -->
+  <path d="M 240,52 C 324,50 408,108 410,190 C 412,272 340,336 256,338 C 172,340 62,280 60,200 C 58,120 156,54 240,52 Z"
+        stroke="#7A9E7E" stroke-width="0.8" opacity="0.12"/>
+  <path d="M 240,88 C 310,86 378,134 380,190 C 382,246 318,300 250,302 C 182,304 104,258 102,202 C 100,146 168,90 240,88 Z"
+        stroke="#7A9E7E" stroke-width="1" opacity="0.18"/>
+  <path d="M 240,126 C 298,124 348,160 348,193 C 348,226 300,263 248,265 C 196,267 130,234 128,200 C 126,166 180,128 240,126 Z"
+        stroke="#C4956A" stroke-width="1.4" opacity="0.24"/>
+  <path d="M 240,160 C 274,158 307,176 307,195 C 307,214 276,236 246,238 C 216,240 172,220 170,198 C 168,176 204,162 240,160 Z"
+        stroke="#C4956A" stroke-width="1.8" opacity="0.3"/>
+  <!-- Central node -->
+  <circle cx="240" cy="198" r="25" fill="#C4956A" opacity="0.2"/>
+  <circle cx="240" cy="198" r="14" fill="#C4956A" opacity="0.35"/>
+  <circle cx="240" cy="198" r="6" fill="#C4956A" opacity="0.65"/>
+  <!-- Satellite connection lines -->
+  <line x1="240" y1="198" x2="138" y2="108" stroke="#D4E4D6" stroke-width="0.9" opacity="0.35" stroke-dasharray="4,7"/>
+  <line x1="240" y1="198" x2="362" y2="95" stroke="#D4E4D6" stroke-width="0.9" opacity="0.3" stroke-dasharray="4,7"/>
+  <line x1="240" y1="198" x2="422" y2="270" stroke="#D4E4D6" stroke-width="0.9" opacity="0.28" stroke-dasharray="4,7"/>
+  <line x1="240" y1="198" x2="98" y2="298" stroke="#D4E4D6" stroke-width="0.9" opacity="0.3" stroke-dasharray="4,7"/>
+  <line x1="240" y1="198" x2="258" y2="60" stroke="#D4E4D6" stroke-width="0.9" opacity="0.25" stroke-dasharray="4,7"/>
+  <!-- Satellite nodes -->
+  <circle cx="138" cy="108" r="10" fill="#7A9E7E" opacity="0.2"/>
+  <circle cx="138" cy="108" r="4.5" fill="#7A9E7E" opacity="0.5"/>
+  <circle cx="362" cy="95" r="8" fill="#7A9E7E" opacity="0.2"/>
+  <circle cx="362" cy="95" r="3.5" fill="#7A9E7E" opacity="0.45"/>
+  <circle cx="422" cy="270" r="11" fill="#C4956A" opacity="0.17"/>
+  <circle cx="422" cy="270" r="5" fill="#C4956A" opacity="0.4"/>
+  <circle cx="98" cy="298" r="8.5" fill="#7A9E7E" opacity="0.19"/>
+  <circle cx="98" cy="298" r="4" fill="#7A9E7E" opacity="0.42"/>
+  <circle cx="258" cy="60" r="6.5" fill="#D4E4D6" opacity="0.38"/>
+  <circle cx="258" cy="60" r="2.5" fill="#D4E4D6" opacity="0.65"/>
+</svg>

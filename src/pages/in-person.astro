@@ -10,6 +10,8 @@ import Layout from '../layouts/Layout.astro';
     <div class="absolute inset-0 opacity-20"
          style="background: radial-gradient(ellipse at 70% 30%, #7A9E7E 0%, transparent 60%), radial-gradient(ellipse at 10% 80%, #C4956A 0%, transparent 50%);">
     </div>
+    <img src="/images/in-person-illustration.svg" alt="" aria-hidden="true"
+         class="absolute right-[-2%] top-1/2 -translate-y-1/2 w-[46%] max-w-[480px] opacity-[0.38] pointer-events-none select-none hidden lg:block" />
     <div class="relative max-w-6xl mx-auto px-6">
       <p class="text-xs tracking-[4px] uppercase text-clay mb-4 font-body">In-Person Interpreting · East Bay</p>
       <h1 class="font-display text-5xl md:text-6xl text-cream mb-6 leading-tight max-w-2xl">
@@ -89,139 +91,6 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- CITIES SERVED -->
-  <section class="max-w-6xl mx-auto px-6 py-20">
-    <p class="text-xs tracking-[4px] uppercase text-earth mb-4 font-body">Service Area</p>
-    <h2 class="font-display text-3xl md:text-4xl text-deep-forest mb-6">
-      Serving the <span class="italic">greater East Bay</span> — in person.
-    </h2>
-    <p class="text-bark/70 leading-relaxed mb-12 max-w-2xl text-sm">
-      Michelle travels to clinics, hospitals, and healthcare facilities throughout a 40-minute radius
-      of Walnut Creek — covering the full Diablo Valley, Lamorinda, East Contra Costa, the Tri-Valley,
-      West County, and the Inner East Bay. Travel is included in the service area.
-    </p>
-
-    <div class="space-y-10 mb-12">
-
-      <!-- Diablo Valley -->
-      <div>
-        <p class="text-xs tracking-[3px] uppercase text-clay font-body mb-4">Diablo Valley</p>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {[
-            { city: 'Walnut Creek', note: 'Home base — clinics, John Muir Health, and Kaiser facilities' },
-            { city: 'Concord', note: 'Contra Costa Regional Medical Center and surrounding clinics' },
-            { city: 'Pleasant Hill', note: 'Primary care, behavioral health, and specialty practices' },
-            { city: 'Martinez', note: 'County seat — Contra Costa Health Services headquarters' },
-            { city: 'Clayton', note: 'Primary and family care practices' },
-            { city: 'Alamo', note: 'Private practices and outpatient facilities' },
-            { city: 'Danville', note: 'San Ramon Valley — specialty clinics and surgical centers' },
-            { city: 'San Ramon', note: 'San Ramon Regional Medical Center and medical offices' },
-          ].map(c => (
-            <div class="bg-cream rounded-2xl p-5 border border-mist">
-              <h3 class="font-display text-base text-deep-forest mb-1">{c.city}</h3>
-              <p class="text-xs text-bark/60 leading-relaxed">{c.note}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <!-- Lamorinda -->
-      <div>
-        <p class="text-xs tracking-[3px] uppercase text-clay font-body mb-4">Lamorinda</p>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {[
-            { city: 'Lafayette', note: 'Behavioral health and outpatient practices' },
-            { city: 'Moraga', note: 'Community health and family medicine' },
-            { city: 'Orinda', note: 'Primary care and specialty clinics' },
-          ].map(c => (
-            <div class="bg-cream rounded-2xl p-5 border border-mist">
-              <h3 class="font-display text-base text-deep-forest mb-1">{c.city}</h3>
-              <p class="text-xs text-bark/60 leading-relaxed">{c.note}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <!-- East Contra Costa -->
-      <div>
-        <p class="text-xs tracking-[3px] uppercase text-clay font-body mb-4">East Contra Costa</p>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {[
-            { city: 'Pittsburg', note: 'Los Medanos Community Hospital and area clinics' },
-            { city: 'Antioch', note: 'Growing healthcare corridor — primary and specialty care' },
-            { city: 'Brentwood', note: 'East County family medicine and outpatient care' },
-            { city: 'Oakley', note: 'Community health and primary care' },
-          ].map(c => (
-            <div class="bg-cream rounded-2xl p-5 border border-mist">
-              <h3 class="font-display text-base text-deep-forest mb-1">{c.city}</h3>
-              <p class="text-xs text-bark/60 leading-relaxed">{c.note}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <!-- Tri-Valley -->
-      <div>
-        <p class="text-xs tracking-[3px] uppercase text-clay font-body mb-4">Tri-Valley</p>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {[
-            { city: 'Dublin', note: 'Kaiser Dublin and surrounding medical offices' },
-            { city: 'Pleasanton', note: 'ValleyCare Health System and specialty clinics' },
-            { city: 'Livermore', note: 'Tri-Valley primary care and behavioral health' },
-          ].map(c => (
-            <div class="bg-cream rounded-2xl p-5 border border-mist">
-              <h3 class="font-display text-base text-deep-forest mb-1">{c.city}</h3>
-              <p class="text-xs text-bark/60 leading-relaxed">{c.note}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <!-- West Contra Costa -->
-      <div>
-        <p class="text-xs tracking-[3px] uppercase text-clay font-body mb-4">West Contra Costa</p>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {[
-            { city: 'Richmond', note: 'Contra Costa Regional and community health centers' },
-            { city: 'San Pablo', note: 'FQHCs and community health serving high LEP population' },
-            { city: 'El Cerrito', note: 'Primary care and outpatient clinics' },
-            { city: 'Hercules', note: 'Medical offices and specialty practices' },
-            { city: 'Pinole', note: 'Community and family medicine' },
-          ].map(c => (
-            <div class="bg-cream rounded-2xl p-5 border border-mist">
-              <h3 class="font-display text-base text-deep-forest mb-1">{c.city}</h3>
-              <p class="text-xs text-bark/60 leading-relaxed">{c.note}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <!-- Inner East Bay -->
-      <div>
-        <p class="text-xs tracking-[3px] uppercase text-clay font-body mb-4">Inner East Bay</p>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {[
-            { city: 'Oakland', note: 'Highland Hospital, Kaiser Oakland, UCSF Benioff, and clinics throughout the city' },
-            { city: 'Berkeley', note: 'Alta Bates Summit, LifeLong Medical, and UC Berkeley–affiliated practices' },
-            { city: 'Albany', note: 'Community health and primary care practices' },
-            { city: 'Emeryville', note: 'Specialty and outpatient medical offices' },
-          ].map(c => (
-            <div class="bg-cream rounded-2xl p-5 border border-mist">
-              <h3 class="font-display text-base text-deep-forest mb-1">{c.city}</h3>
-              <p class="text-xs text-bark/60 leading-relaxed">{c.note}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-    </div>
-
-    <p class="text-sm text-bark/50 italic">
-      Don't see your city? Reach out — if it's within a reasonable drive, Michelle can likely accommodate.
-      <a href="/contact" class="text-clay hover:underline ml-1">Get in touch →</a>
-    </p>
-  </section>
-
   <!-- WHY IN-PERSON -->
   <section class="bg-cream py-20">
     <div class="max-w-6xl mx-auto px-6">
@@ -299,6 +168,141 @@ import Layout from '../layouts/Layout.astro';
           <p class="text-xs text-bark/60 leading-relaxed">{i.desc}</p>
         </div>
       ))}
+    </div>
+  </section>
+
+  <!-- CITIES SERVED -->
+  <section class="bg-cream py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <p class="text-xs tracking-[4px] uppercase text-earth mb-4 font-body">Service Area</p>
+      <h2 class="font-display text-3xl md:text-4xl text-deep-forest mb-6">
+        Serving the <span class="italic">greater East Bay</span> — in person.
+      </h2>
+      <p class="text-bark/70 leading-relaxed mb-12 max-w-2xl text-sm">
+        Michelle travels to clinics, hospitals, and healthcare facilities throughout a 40-minute radius
+        of Walnut Creek — covering the full Diablo Valley, Lamorinda, East Contra Costa, the Tri-Valley,
+        West County, and the Inner East Bay. Travel is included in the service area.
+      </p>
+
+      <div class="space-y-10 mb-12">
+
+        <!-- Diablo Valley -->
+        <div>
+          <p class="text-xs tracking-[3px] uppercase text-clay font-body mb-4">Diablo Valley</p>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { city: 'Walnut Creek', note: 'Home base — clinics, John Muir Health, and Kaiser facilities' },
+              { city: 'Concord', note: 'Contra Costa Regional Medical Center and surrounding clinics' },
+              { city: 'Pleasant Hill', note: 'Primary care, behavioral health, and specialty practices' },
+              { city: 'Martinez', note: 'County seat — Contra Costa Health Services headquarters' },
+              { city: 'Clayton', note: 'Primary and family care practices' },
+              { city: 'Alamo', note: 'Private practices and outpatient facilities' },
+              { city: 'Danville', note: 'San Ramon Valley — specialty clinics and surgical centers' },
+              { city: 'San Ramon', note: 'San Ramon Regional Medical Center and medical offices' },
+            ].map(c => (
+              <div class="bg-white rounded-2xl p-5 border border-mist">
+                <h3 class="font-display text-base text-deep-forest mb-1">{c.city}</h3>
+                <p class="text-xs text-bark/60 leading-relaxed">{c.note}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- Lamorinda -->
+        <div>
+          <p class="text-xs tracking-[3px] uppercase text-clay font-body mb-4">Lamorinda</p>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { city: 'Lafayette', note: 'Behavioral health and outpatient practices' },
+              { city: 'Moraga', note: 'Community health and family medicine' },
+              { city: 'Orinda', note: 'Primary care and specialty clinics' },
+            ].map(c => (
+              <div class="bg-white rounded-2xl p-5 border border-mist">
+                <h3 class="font-display text-base text-deep-forest mb-1">{c.city}</h3>
+                <p class="text-xs text-bark/60 leading-relaxed">{c.note}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- East Contra Costa -->
+        <div>
+          <p class="text-xs tracking-[3px] uppercase text-clay font-body mb-4">East Contra Costa</p>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { city: 'Pittsburg', note: 'Los Medanos Community Hospital and area clinics' },
+              { city: 'Antioch', note: 'Growing healthcare corridor — primary and specialty care' },
+              { city: 'Brentwood', note: 'East County family medicine and outpatient care' },
+              { city: 'Oakley', note: 'Community health and primary care' },
+            ].map(c => (
+              <div class="bg-white rounded-2xl p-5 border border-mist">
+                <h3 class="font-display text-base text-deep-forest mb-1">{c.city}</h3>
+                <p class="text-xs text-bark/60 leading-relaxed">{c.note}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- Tri-Valley -->
+        <div>
+          <p class="text-xs tracking-[3px] uppercase text-clay font-body mb-4">Tri-Valley</p>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { city: 'Dublin', note: 'Kaiser Dublin and surrounding medical offices' },
+              { city: 'Pleasanton', note: 'ValleyCare Health System and specialty clinics' },
+              { city: 'Livermore', note: 'Tri-Valley primary care and behavioral health' },
+            ].map(c => (
+              <div class="bg-white rounded-2xl p-5 border border-mist">
+                <h3 class="font-display text-base text-deep-forest mb-1">{c.city}</h3>
+                <p class="text-xs text-bark/60 leading-relaxed">{c.note}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- West Contra Costa -->
+        <div>
+          <p class="text-xs tracking-[3px] uppercase text-clay font-body mb-4">West Contra Costa</p>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { city: 'Richmond', note: 'Contra Costa Regional and community health centers' },
+              { city: 'San Pablo', note: 'FQHCs and community health serving high LEP population' },
+              { city: 'El Cerrito', note: 'Primary care and outpatient clinics' },
+              { city: 'Hercules', note: 'Medical offices and specialty practices' },
+              { city: 'Pinole', note: 'Community and family medicine' },
+            ].map(c => (
+              <div class="bg-white rounded-2xl p-5 border border-mist">
+                <h3 class="font-display text-base text-deep-forest mb-1">{c.city}</h3>
+                <p class="text-xs text-bark/60 leading-relaxed">{c.note}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- Inner East Bay -->
+        <div>
+          <p class="text-xs tracking-[3px] uppercase text-clay font-body mb-4">Inner East Bay</p>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { city: 'Oakland', note: 'Highland Hospital, Kaiser Oakland, UCSF Benioff, and clinics throughout the city' },
+              { city: 'Berkeley', note: 'Alta Bates Summit, LifeLong Medical, and UC Berkeley–affiliated practices' },
+              { city: 'Albany', note: 'Community health and primary care practices' },
+              { city: 'Emeryville', note: 'Specialty and outpatient medical offices' },
+            ].map(c => (
+              <div class="bg-white rounded-2xl p-5 border border-mist">
+                <h3 class="font-display text-base text-deep-forest mb-1">{c.city}</h3>
+                <p class="text-xs text-bark/60 leading-relaxed">{c.note}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+      </div>
+
+      <p class="text-sm text-bark/50 italic">
+        Don't see your city? Reach out — if it's within a reasonable drive, Michelle can likely accommodate.
+        <a href="/contact" class="text-clay hover:underline ml-1">Get in touch →</a>
+      </p>
     </div>
   </section>
 

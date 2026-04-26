@@ -1,0 +1,32 @@
+<svg viewBox="0 0 480 380" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <!-- Location radius rings -->
+  <circle cx="240" cy="148" r="152" stroke="#7A9E7E" stroke-width="0.8" opacity="0.09"/>
+  <circle cx="240" cy="148" r="108" stroke="#7A9E7E" stroke-width="1" opacity="0.13"/>
+  <circle cx="240" cy="148" r="66" stroke="#7A9E7E" stroke-width="1.2" opacity="0.19"/>
+  <!-- Location pin body — organic teardrop -->
+  <path d="M 240,48 C 274,48 298,72 298,102 C 298,132 272,162 245,178 C 243,179 237,179 235,178 C 208,162 182,132 182,102 C 182,72 206,48 240,48 Z"
+        fill="#C4956A" opacity="0.28"/>
+  <!-- Pin ring and dot -->
+  <circle cx="240" cy="102" r="23" stroke="#C4956A" stroke-width="2" opacity="0.45"/>
+  <circle cx="240" cy="102" r="9" fill="#C4956A" opacity="0.55"/>
+  <!-- Root system from pin tip -->
+  <path d="M 240,178 C 240,208 239,242 237,278" stroke="#7A9E7E" stroke-width="1.8" opacity="0.32"/>
+  <path d="M 240,222 C 220,230 196,242 170,256 C 148,268 126,282 106,294" stroke="#7A9E7E" stroke-width="1.5" opacity="0.28"/>
+  <path d="M 240,222 C 260,230 284,242 310,256 C 332,268 354,282 374,294" stroke="#7A9E7E" stroke-width="1.5" opacity="0.28"/>
+  <path d="M 188,252 C 172,259 156,264 140,268" stroke="#7A9E7E" stroke-width="1" opacity="0.2"/>
+  <path d="M 162,275 C 148,281 134,285 118,288" stroke="#7A9E7E" stroke-width="0.8" opacity="0.15"/>
+  <path d="M 292,252 C 308,259 324,264 340,268" stroke="#7A9E7E" stroke-width="1" opacity="0.2"/>
+  <path d="M 318,275 C 332,281 346,285 362,288" stroke="#7A9E7E" stroke-width="0.8" opacity="0.15"/>
+  <!-- City dots in area -->
+  <circle cx="160" cy="112" r="5" fill="#7A9E7E" opacity="0.25"/>
+  <circle cx="322" cy="96" r="4.5" fill="#7A9E7E" opacity="0.22"/>
+  <circle cx="174" cy="192" r="4" fill="#C4956A" opacity="0.2"/>
+  <circle cx="308" cy="184" r="3.5" fill="#C4956A" opacity="0.18"/>
+  <circle cx="138" cy="155" r="3" fill="#7A9E7E" opacity="0.2"/>
+  <circle cx="350" cy="150" r="3" fill="#7A9E7E" opacity="0.2"/>
+  <!-- Leaf accents flanking -->
+  <path d="M 94,115 C 102,100 120,101 118,115 C 116,130 100,135 93,124 C 87,115 86,129 94,115 Z"
+        fill="#7A9E7E" opacity="0.22"/>
+  <path d="M 386,115 C 378,100 360,101 362,115 C 364,130 380,135 387,124 C 393,115 394,129 386,115 Z"
+        fill="#7A9E7E" opacity="0.22"/>
+</svg>
