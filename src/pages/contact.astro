@@ -150,21 +150,6 @@ import Layout from '../layouts/Layout.astro';
             <option value="full-day">Full day (8 hours)</option>
             <option value="custom">Custom / TBD</option>
           </select>
-          <p id="min-duration-note" class="hidden text-xs text-earth mt-2">In-person sessions have a 2-hour minimum.</p>
-        </div>
-
-        <div>
-          <label class="block text-xs tracking-[2px] uppercase text-earth mb-2 font-body" for="format">
-            Session Format
-          </label>
-          <select
-            id="format" name="format"
-            class="w-full bg-cream border border-mist rounded-xl px-4 py-3 text-sm text-bark focus:outline-none focus:border-sage transition-colors appearance-none"
-          >
-            <option value="">Select format...</option>
-            <option value="virtual">Virtual (Video or Phone)</option>
-            <option value="in-person">In-Person (On-Site)</option>
-          </select>
         </div>
 
         <!-- Virtual: optional meeting link -->
@@ -272,35 +257,48 @@ import Layout from '../layouts/Layout.astro';
   if (params.get('sent') === 'true') document.getElementById('success-msg')!.classList.remove('hidden');
   if (params.get('error') === 'true') document.getElementById('error-msg')!.classList.remove('hidden');
 
-  const formatSelect = document.getElementById('format') as HTMLSelectElement;
   const serviceSelect = document.getElementById('service') as HTMLSelectElement;
+  const durationSelect = document.getElementById('duration') as HTMLSelectElement;
   const virtualFields = document.getElementById('virtual-fields') as HTMLElement;
   const inPersonFields = document.getElementById('in-person-fields') as HTMLElement;
   const locationInput = document.getElementById('location') as HTMLInputElement;
-  const minDurationNote = document.getElementById('min-duration-note') as HTMLElement;
 
-  function applyFormat(val: string) {
-    virtualFields.classList.toggle('hidden', val !== 'virtual');
-    inPersonFields.classList.toggle('hidden', val !== 'in-person');
-    minDurationNote.classList.toggle('hidden', val !== 'in-person');
-    if (val === 'in-person') {
+  const allDurations = [
+    { value: '', label: 'Select length...' },
+    { value: '15min', label: '15 minutes' },
+    { value: '30min', label: '30 minutes' },
+    { value: '1hr', label: '1 hour' },
+    { value: '2hr', label: '2 hours' },
+    { value: 'half-day', label: 'Half day (4 hours)' },
+    { value: 'full-day', label: 'Full day (8 hours)' },
+    { value: 'custom', label: 'Custom / TBD' },
+  ];
+  const inPersonOnly = new Set(['', '2hr', 'half-day', 'full-day', 'custom']);
+
+  function updateForm(service: string) {
+    const isInPerson = service === 'in-person';
+    const isRemote = service === 'remote';
+
+    virtualFields.classList.toggle('hidden', !isRemote);
+    inPersonFields.classList.toggle('hidden', !isInPerson);
+    if (isInPerson) {
       locationInput.setAttribute('required', '');
     } else {
       locationInput.removeAttribute('required');
     }
+
+    const current = durationSelect.value;
+    durationSelect.innerHTML = '';
+    allDurations
+      .filter(d => !isInPerson || inPersonOnly.has(d.value))
+      .forEach(({ value, label }) => {
+        const opt = document.createElement('option');
+        opt.value = value;
+        opt.textContent = label;
+        durationSelect.appendChild(opt);
+      });
+    durationSelect.value = [...durationSelect.options].some(o => o.value === current) ? current : '';
   }
 
-  formatSelect.addEventListener('change', () => applyFormat(formatSelect.value));
-
-  // Pre-select format when service is chosen
-  serviceSelect.addEventListener('change', () => {
-    const svc = serviceSelect.value;
-    if (svc === 'remote' && formatSelect.value === '') {
-      formatSelect.value = 'virtual';
-      applyFormat('virtual');
-    } else if (svc === 'in-person' && formatSelect.value === '') {
-      formatSelect.value = 'in-person';
-      applyFormat('in-person');
-    }
-  });
+  serviceSelect.addEventListener('change', () => updateForm(serviceSelect.value));
 </script>
