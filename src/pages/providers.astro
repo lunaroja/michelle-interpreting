@@ -142,50 +142,52 @@ import Layout from '../layouts/Layout.astro';
         No hidden fees. No <span class="italic">per-minute surprises.</span>
       </h2>
       <p class="text-bark/70 text-center mb-14 max-w-xl mx-auto text-sm leading-relaxed">
-        Large agencies charge $3.95–$4.95/minute — that's $237–$297 per hour just for phone and video access.
-        Mi Voz offers straightforward hourly rates with no dispatch fees, no markups, and no minimums for established clients.
+        Traditional agencies often charge $3.95–$4.95 per minute.<br/>
+        Our pricing is transparent and significantly more affordable.
       </p>
-      <div class="grid md:grid-cols-3 gap-6 mb-12">
-        {[
-          {
-            label: 'On-Site Interpreting',
-            icon: '🏥',
-            note: 'Diablo Valley & Bay Area',
-            features: ['Flexible hourly scheduling', 'No agency dispatch fee', 'Same interpreter every time', 'Travel included in service area'],
-            cta: 'Get On-Site Quote'
-          },
-          {
-            label: 'Video Remote (VRI)',
-            icon: '🎥',
-            note: 'Available nationwide',
-            features: ['Telehealth-ready setup', 'Zoom, Teams, Doxy.me', 'Behavioral health specialty', 'Scheduled & recurring available'],
-            cta: 'Get VRI Quote'
-          },
-          {
-            label: 'Phone Interpreting',
-            icon: '📞',
-            note: 'Available nationwide',
-            features: ['Pre-scheduled appointments', 'Urgent & follow-up calls', 'On-demand availability discussed', 'Per-session or retainer options'],
-            cta: 'Get OPI Quote'
-          }
-        ].map(p => (
-          <div class="bg-white rounded-2xl p-8 border border-mist shadow-sm">
-            <div class="text-3xl mb-4">{p.icon}</div>
-            <h3 class="font-display text-xl text-deep-forest mb-1">{p.label}</h3>
-            <p class="text-xs text-earth tracking-wide mb-5">{p.note}</p>
-            <ul class="space-y-2 mb-6">
-              {p.features.map(f => (
-                <li class="flex items-center gap-3 text-sm text-bark/70">
-                  <span class="text-clay">✓</span> {f}
-                </li>
-              ))}
-            </ul>
-            <a href="/contact"
-               class="inline-block w-full text-center bg-deep-forest text-cream text-sm font-medium px-5 py-3 rounded-full hover:bg-forest transition-colors">
-              {p.cta} →
-            </a>
+      <div class="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto mb-12">
+        <div class="bg-white rounded-2xl p-8 border border-mist shadow-sm flex flex-col">
+          <div class="text-3xl mb-4">🎥</div>
+          <h3 class="font-display text-xl text-deep-forest mb-1">Remote Interpreting</h3>
+          <p class="text-xs text-earth tracking-wide mb-5">Video & Phone · Available nationwide</p>
+          <div class="mb-1">
+            <span class="font-display text-4xl text-deep-forest">$80</span>
+            <span class="text-bark/60 text-sm">/hour</span>
           </div>
-        ))}
+          <p class="text-xs text-bark/50 mb-6">Billed in 15-minute increments ($20 per 15 min)</p>
+          <ul class="space-y-2 mb-8 flex-1">
+            {['Ideal for quick conversations, appointments, and virtual meetings', 'Zoom, Teams, Doxy.me, or your existing platform', 'Behavioral health specialty', 'Scheduled & recurring available'].map(f => (
+              <li class="flex items-start gap-3 text-sm text-bark/70">
+                <span class="text-clay mt-0.5 flex-shrink-0">✓</span> {f}
+              </li>
+            ))}
+          </ul>
+          <a href="/contact"
+             class="inline-block w-full text-center bg-deep-forest text-cream text-sm font-medium px-5 py-3 rounded-full hover:bg-forest transition-colors">
+            Book Remote Session →
+          </a>
+        </div>
+        <div class="bg-white rounded-2xl p-8 border border-mist shadow-sm flex flex-col">
+          <div class="text-3xl mb-4">🏥</div>
+          <h3 class="font-display text-xl text-deep-forest mb-1">In-Person Interpreting</h3>
+          <p class="text-xs text-earth tracking-wide mb-5">On-Site · Diablo Valley & Bay Area</p>
+          <div class="mb-1">
+            <span class="font-display text-4xl text-deep-forest">$120</span>
+            <span class="text-bark/60 text-sm">/hour</span>
+          </div>
+          <p class="text-xs text-bark/50 mb-6">2-hour minimum</p>
+          <ul class="space-y-2 mb-8 flex-1">
+            {['Best for medical visits, legal appointments, and on-site support', 'Same interpreter every time', 'No agency dispatch fee', 'Travel included in service area'].map(f => (
+              <li class="flex items-start gap-3 text-sm text-bark/70">
+                <span class="text-clay mt-0.5 flex-shrink-0">✓</span> {f}
+              </li>
+            ))}
+          </ul>
+          <a href="/contact"
+             class="inline-block w-full text-center bg-deep-forest text-cream text-sm font-medium px-5 py-3 rounded-full hover:bg-forest transition-colors">
+            Book In-Person Session →
+          </a>
+        </div>
       </div>
       <div class="bg-deep-forest rounded-2xl p-8 md:p-10 text-center max-w-2xl mx-auto">
         <p class="text-clay text-xs tracking-[3px] uppercase mb-3 font-body">For Regular Engagements</p>

@@ -99,10 +99,8 @@ import Layout from '../layouts/Layout.astro';
             class="w-full bg-cream border border-mist rounded-xl px-4 py-3 text-sm text-bark focus:outline-none focus:border-sage transition-colors appearance-none"
           >
             <option value="">Select a service...</option>
-            <option value="on-site">On-Site Interpreting</option>
-            <option value="video">Video Remote Interpreting (VRI)</option>
-            <option value="phone">Phone Interpreting (OPI)</option>
-            <option value="document">Document Translation</option>
+            <option value="remote">Remote Interpreting — Video or Phone ($80/hr)</option>
+            <option value="in-person">In-Person Interpreting ($120/hr · 2-hr minimum)</option>
             <option value="partnership">Provider Partnership / Contract</option>
             <option value="other">Other / Not Sure</option>
           </select>
@@ -138,6 +136,7 @@ import Layout from '../layouts/Layout.astro';
             class="w-full bg-cream border border-mist rounded-xl px-4 py-3 text-sm text-bark focus:outline-none focus:border-sage transition-colors appearance-none"
           >
             <option value="">Select length...</option>
+            <option value="15min">15 minutes</option>
             <option value="30min">30 minutes</option>
             <option value="1hr">1 hour</option>
             <option value="2hr">2 hours</option>
@@ -145,6 +144,7 @@ import Layout from '../layouts/Layout.astro';
             <option value="full-day">Full day (8 hours)</option>
             <option value="custom">Custom / TBD</option>
           </select>
+          <p id="min-duration-note" class="hidden text-xs text-earth mt-2">In-person sessions have a 2-hour minimum.</p>
         </div>
 
         <div>
@@ -270,18 +270,34 @@ import Layout from '../layouts/Layout.astro';
 
 <script>
   const formatSelect = document.getElementById('format') as HTMLSelectElement;
+  const serviceSelect = document.getElementById('service') as HTMLSelectElement;
   const virtualFields = document.getElementById('virtual-fields') as HTMLElement;
   const inPersonFields = document.getElementById('in-person-fields') as HTMLElement;
   const locationInput = document.getElementById('location') as HTMLInputElement;
+  const minDurationNote = document.getElementById('min-duration-note') as HTMLElement;
 
-  formatSelect.addEventListener('change', () => {
-    const val = formatSelect.value;
+  function applyFormat(val: string) {
     virtualFields.classList.toggle('hidden', val !== 'virtual');
     inPersonFields.classList.toggle('hidden', val !== 'in-person');
+    minDurationNote.classList.toggle('hidden', val !== 'in-person');
     if (val === 'in-person') {
       locationInput.setAttribute('required', '');
     } else {
       locationInput.removeAttribute('required');
+    }
+  }
+
+  formatSelect.addEventListener('change', () => applyFormat(formatSelect.value));
+
+  // Pre-select format when service is chosen
+  serviceSelect.addEventListener('change', () => {
+    const svc = serviceSelect.value;
+    if (svc === 'remote' && formatSelect.value === '') {
+      formatSelect.value = 'virtual';
+      applyFormat('virtual');
+    } else if (svc === 'in-person' && formatSelect.value === '') {
+      formatSelect.value = 'in-person';
+      applyFormat('in-person');
     }
   });
 </script>
