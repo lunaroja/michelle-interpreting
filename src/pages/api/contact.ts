@@ -56,7 +56,7 @@ export const POST: APIRoute = async ({ request }) => {
   const { error } = await resend.emails.send({
     from: 'Mi Voz Contact Form <noreply@lunaroja.org>',
     to: 'michelle@lunaroja.org',
-    reply_to: email as string,
+    replyTo: email as string,
     subject: `New booking request from ${name}`,
     html,
   });
