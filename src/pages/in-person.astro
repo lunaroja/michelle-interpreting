@@ -91,6 +91,36 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
+  <!-- APPOINTMENT TYPES -->
+  <section class="max-w-6xl mx-auto px-6 py-20">
+    <p class="text-xs tracking-[4px] uppercase text-earth mb-4 font-body text-center">Common In-Person Settings</p>
+    <h2 class="font-display text-3xl text-deep-forest text-center mb-4">
+      Every appointment where <span class="italic">presence matters</span>
+    </h2>
+    <p class="text-bark/70 text-center mb-14 max-w-xl mx-auto text-sm leading-relaxed">
+      In-person interpreting is especially valuable for appointments where tone, body language,
+      and emotional context are part of the clinical picture.
+    </p>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      {[
+        { icon: '🏥', title: 'Hospital Visits', desc: 'Admissions, discharge planning, surgical consultations, and inpatient care rounds.' },
+        { icon: '🧠', title: 'Behavioral Health', desc: 'Therapy, psychiatry, intake evaluations, and crisis support — where nuance is everything.' },
+        { icon: '👶', title: 'Pediatric Appointments', desc: 'Well-child visits, developmental evaluations, and specialty consultations.' },
+        { icon: '⚕️', title: 'Complex Diagnoses', desc: 'Oncology, neurology, and other high-stakes conversations that deserve full presence.' },
+        { icon: '📋', title: 'Informed Consent', desc: 'Procedure explanations, consent review, and patient rights discussions.' },
+        { icon: '💊', title: 'Medication Consultations', desc: 'Pharmacy counseling, medication management, and adherence planning.' },
+        { icon: '🌿', title: 'Substance Use & Recovery', desc: 'Intake, treatment planning, and ongoing support for patients in recovery.' },
+        { icon: '👥', title: 'Care Conferences', desc: 'Family meetings, team consultations, and interdisciplinary care coordination.' },
+      ].map(i => (
+        <div class="bg-cream rounded-2xl p-6 border border-mist shadow-sm">
+          <div class="text-3xl mb-4">{i.icon}</div>
+          <h3 class="font-medium text-deep-forest text-sm mb-2">{i.title}</h3>
+          <p class="text-xs text-bark/60 leading-relaxed">{i.desc}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
   <!-- WHY IN-PERSON -->
   <section class="bg-cream py-20">
     <div class="max-w-6xl mx-auto px-6">
@@ -138,36 +168,6 @@ import Layout from '../layouts/Layout.astro';
           ))}
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- APPOINTMENT TYPES -->
-  <section class="max-w-6xl mx-auto px-6 py-20">
-    <p class="text-xs tracking-[4px] uppercase text-earth mb-4 font-body text-center">Common In-Person Settings</p>
-    <h2 class="font-display text-3xl text-deep-forest text-center mb-4">
-      Every appointment where <span class="italic">presence matters</span>
-    </h2>
-    <p class="text-bark/70 text-center mb-14 max-w-xl mx-auto text-sm leading-relaxed">
-      In-person interpreting is especially valuable for appointments where tone, body language,
-      and emotional context are part of the clinical picture.
-    </p>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-      {[
-        { icon: '🏥', title: 'Hospital Visits', desc: 'Admissions, discharge planning, surgical consultations, and inpatient care rounds.' },
-        { icon: '🧠', title: 'Behavioral Health', desc: 'Therapy, psychiatry, intake evaluations, and crisis support — where nuance is everything.' },
-        { icon: '👶', title: 'Pediatric Appointments', desc: 'Well-child visits, developmental evaluations, and specialty consultations.' },
-        { icon: '⚕️', title: 'Complex Diagnoses', desc: 'Oncology, neurology, and other high-stakes conversations that deserve full presence.' },
-        { icon: '📋', title: 'Informed Consent', desc: 'Procedure explanations, consent review, and patient rights discussions.' },
-        { icon: '💊', title: 'Medication Consultations', desc: 'Pharmacy counseling, medication management, and adherence planning.' },
-        { icon: '🌿', title: 'Substance Use & Recovery', desc: 'Intake, treatment planning, and ongoing support for patients in recovery.' },
-        { icon: '👥', title: 'Care Conferences', desc: 'Family meetings, team consultations, and interdisciplinary care coordination.' },
-      ].map(i => (
-        <div class="bg-cream rounded-2xl p-6 border border-mist shadow-sm">
-          <div class="text-3xl mb-4">{i.icon}</div>
-          <h3 class="font-medium text-deep-forest text-sm mb-2">{i.title}</h3>
-          <p class="text-xs text-bark/60 leading-relaxed">{i.desc}</p>
-        </div>
-      ))}
     </div>
   </section>
 
