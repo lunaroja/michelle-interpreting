@@ -62,6 +62,7 @@ export const POST: APIRoute = async ({ request }) => {
   });
 
   if (error) {
+    console.error('Resend error:', JSON.stringify(error));
     return new Response(null, { status: 302, headers: { Location: '/contact?error=true' } });
   }
 
