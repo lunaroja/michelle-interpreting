@@ -37,10 +37,16 @@ import Layout from '../layouts/Layout.astro';
 
       <h2 class="font-display text-2xl text-deep-forest mb-8">Request a Session</h2>
 
-      <!-- Replace the action URL with your Formspree form ID: https://formspree.io -->
+      <div id="success-msg" class="hidden bg-sage/20 border border-sage rounded-xl px-5 py-4 mb-6">
+        <p class="text-sm text-forest font-medium">Request sent — Michelle will be in touch within one business day.</p>
+      </div>
+      <div id="error-msg" class="hidden bg-clay/10 border border-clay/40 rounded-xl px-5 py-4 mb-6">
+        <p class="text-sm text-earth font-medium">Something went wrong. Please email michelle@mivozinterpreting.com directly.</p>
+      </div>
+
       <form
         method="POST"
-        action="https://formspree.io/f/REPLACE_WITH_FORMSPREE_ID"
+        action="/api/contact"
         class="space-y-5"
       >
 
@@ -262,6 +268,10 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
 <script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('sent') === 'true') document.getElementById('success-msg')!.classList.remove('hidden');
+  if (params.get('error') === 'true') document.getElementById('error-msg')!.classList.remove('hidden');
+
   const formatSelect = document.getElementById('format') as HTMLSelectElement;
   const serviceSelect = document.getElementById('service') as HTMLSelectElement;
   const virtualFields = document.getElementById('virtual-fields') as HTMLElement;
