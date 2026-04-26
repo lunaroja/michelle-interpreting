@@ -4,6 +4,7 @@
   "framework": "astro",
   "redirects": [
     { "source": "/intro", "destination": "https://calendar.app.google/2UUUtz6JJ4zLQycv9", "permanent": false },
+    { "source": "/walnut-creek", "destination": "/in-person", "permanent": true },
     { "source": "/central-valley", "destination": "/remote", "permanent": true },
     { "source": "/services", "destination": "/in-person", "permanent": false }
   ],
