@@ -1,48 +1,78 @@
 <svg viewBox="0 0 270 230" xmlns="http://www.w3.org/2000/svg" fill="none">
 
-  <!-- Roof (triangle) -->
-  <path d="M 25,68 L 135,12 L 245,68 Z"
-        fill="#7A9E7E" fill-opacity="0.2" stroke="#7A9E7E" stroke-width="2.5" stroke-linejoin="round"/>
-  <!-- Roof ridge cap -->
-  <rect x="122" y="10" width="26" height="12" rx="4" fill="#C4956A" opacity="0.4"/>
+  <!-- Flat parapet / cornice band at top (institutional, not a house) -->
+  <rect x="18" y="24" width="234" height="20" rx="3"
+        fill="#C4956A" fill-opacity="0.3" stroke="#C4956A" stroke-width="2"/>
+  <!-- Small vertical accent above parapet (rooftop unit / HVAC box) -->
+  <rect x="110" y="12" width="50" height="16" rx="2"
+        fill="#7A9E7E" fill-opacity="0.25" stroke="#7A9E7E" stroke-width="1.5"/>
 
-  <!-- Building body -->
-  <rect x="35" y="66" width="200" height="145" rx="4"
-        fill="#C4956A" fill-opacity="0.1" stroke="#C4956A" stroke-width="2.5"/>
+  <!-- Building body (tall, flat-top, institutional) -->
+  <rect x="24" y="42" width="222" height="170" rx="3"
+        fill="#C4956A" fill-opacity="0.08" stroke="#C4956A" stroke-width="2.5"/>
 
-  <!-- Upper windows (left and right) -->
-  <rect x="55" y="88" width="48" height="44" rx="4"
-        fill="#D4E4D6" fill-opacity="0.2" stroke="#D4E4D6" stroke-width="2" opacity="0.75"/>
-  <!-- Window cross bars -->
-  <line x1="79" y1="88" x2="79" y2="132" stroke="#D4E4D6" stroke-width="1.5" opacity="0.6"/>
-  <line x1="55" y1="110" x2="103" y2="110" stroke="#D4E4D6" stroke-width="1.5" opacity="0.6"/>
+  <!-- TOP FLOOR: 4 windows with cross-dividers -->
+  <rect x="38" y="58" width="36" height="28" rx="3"
+        fill="#D4E4D6" fill-opacity="0.22" stroke="#D4E4D6" stroke-width="2" opacity="0.8"/>
+  <line x1="56" y1="58" x2="56" y2="86" stroke="#D4E4D6" stroke-width="1.2" opacity="0.5"/>
+  <line x1="38" y1="72" x2="74" y2="72" stroke="#D4E4D6" stroke-width="1.2" opacity="0.5"/>
 
-  <rect x="167" y="88" width="48" height="44" rx="4"
-        fill="#D4E4D6" fill-opacity="0.2" stroke="#D4E4D6" stroke-width="2" opacity="0.75"/>
-  <line x1="191" y1="88" x2="191" y2="132" stroke="#D4E4D6" stroke-width="1.5" opacity="0.6"/>
-  <line x1="167" y1="110" x2="215" y2="110" stroke="#D4E4D6" stroke-width="1.5" opacity="0.6"/>
+  <rect x="86" y="58" width="36" height="28" rx="3"
+        fill="#D4E4D6" fill-opacity="0.22" stroke="#D4E4D6" stroke-width="2" opacity="0.8"/>
+  <line x1="104" y1="58" x2="104" y2="86" stroke="#D4E4D6" stroke-width="1.2" opacity="0.5"/>
+  <line x1="86" y1="72" x2="122" y2="72" stroke="#D4E4D6" stroke-width="1.2" opacity="0.5"/>
 
-  <!-- Medical cross (centered on upper facade) -->
-  <!-- Horizontal bar -->
-  <rect x="116" y="88" width="38" height="14" rx="3"
-        fill="#C4956A" fill-opacity="0.5" stroke="#C4956A" stroke-width="1.5"/>
-  <!-- Vertical bar -->
-  <rect x="128" y="76" width="14" height="38" rx="3"
-        fill="#C4956A" fill-opacity="0.5" stroke="#C4956A" stroke-width="1.5"/>
+  <rect x="148" y="58" width="36" height="28" rx="3"
+        fill="#D4E4D6" fill-opacity="0.22" stroke="#D4E4D6" stroke-width="2" opacity="0.8"/>
+  <line x1="166" y1="58" x2="166" y2="86" stroke="#D4E4D6" stroke-width="1.2" opacity="0.5"/>
+  <line x1="148" y1="72" x2="184" y2="72" stroke="#D4E4D6" stroke-width="1.2" opacity="0.5"/>
 
-  <!-- Door (central) -->
-  <rect x="110" y="152" width="50" height="59" rx="4"
-        fill="#7A9E7E" fill-opacity="0.18" stroke="#7A9E7E" stroke-width="2.2"/>
-  <!-- Door knob -->
-  <circle cx="120" cy="183" r="4" fill="#C4956A" opacity="0.7"/>
+  <rect x="196" y="58" width="36" height="28" rx="3"
+        fill="#D4E4D6" fill-opacity="0.22" stroke="#D4E4D6" stroke-width="2" opacity="0.8"/>
+  <line x1="214" y1="58" x2="214" y2="86" stroke="#D4E4D6" stroke-width="1.2" opacity="0.5"/>
+  <line x1="196" y1="72" x2="232" y2="72" stroke="#D4E4D6" stroke-width="1.2" opacity="0.5"/>
 
-  <!-- Steps in front of door -->
-  <line x1="103" y1="211" x2="167" y2="211" stroke="#C4956A" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
-  <line x1="97" y1="218" x2="173" y2="218" stroke="#C4956A" stroke-width="2.5" stroke-linecap="round" opacity="0.4"/>
+  <!-- MEDICAL CROSS (centered on facade between the two window rows) -->
+  <rect x="120" y="95" width="30" height="11" rx="2"
+        fill="#C4956A" fill-opacity="0.6" stroke="#C4956A" stroke-width="1.5"/>
+  <rect x="130" y="85" width="11" height="31" rx="2"
+        fill="#C4956A" fill-opacity="0.6" stroke="#C4956A" stroke-width="1.5"/>
 
-  <!-- Ground bushes -->
-  <circle cx="25" cy="200" r="16" fill="#7A9E7E" fill-opacity="0.2" stroke="#7A9E7E" stroke-width="2" opacity="0.65"/>
-  <circle cx="14" cy="208" r="11" fill="#7A9E7E" fill-opacity="0.15" stroke="#7A9E7E" stroke-width="1.5" opacity="0.55"/>
-  <circle cx="245" cy="200" r="16" fill="#7A9E7E" fill-opacity="0.2" stroke="#7A9E7E" stroke-width="2" opacity="0.65"/>
-  <circle cx="256" cy="208" r="11" fill="#7A9E7E" fill-opacity="0.15" stroke="#7A9E7E" stroke-width="1.5" opacity="0.55"/>
+  <!-- SECOND FLOOR: 4 windows flanking the cross area -->
+  <rect x="38" y="120" width="36" height="28" rx="3"
+        fill="#D4E4D6" fill-opacity="0.22" stroke="#D4E4D6" stroke-width="2" opacity="0.8"/>
+  <line x1="56" y1="120" x2="56" y2="148" stroke="#D4E4D6" stroke-width="1.2" opacity="0.5"/>
+  <line x1="38" y1="134" x2="74" y2="134" stroke="#D4E4D6" stroke-width="1.2" opacity="0.5"/>
+
+  <rect x="86" y="120" width="36" height="28" rx="3"
+        fill="#D4E4D6" fill-opacity="0.22" stroke="#D4E4D6" stroke-width="2" opacity="0.8"/>
+  <line x1="104" y1="120" x2="104" y2="148" stroke="#D4E4D6" stroke-width="1.2" opacity="0.5"/>
+  <line x1="86" y1="134" x2="122" y2="134" stroke="#D4E4D6" stroke-width="1.2" opacity="0.5"/>
+
+  <rect x="148" y="120" width="36" height="28" rx="3"
+        fill="#D4E4D6" fill-opacity="0.22" stroke="#D4E4D6" stroke-width="2" opacity="0.8"/>
+  <line x1="166" y1="120" x2="166" y2="148" stroke="#D4E4D6" stroke-width="1.2" opacity="0.5"/>
+  <line x1="148" y1="134" x2="184" y2="134" stroke="#D4E4D6" stroke-width="1.2" opacity="0.5"/>
+
+  <rect x="196" y="120" width="36" height="28" rx="3"
+        fill="#D4E4D6" fill-opacity="0.22" stroke="#D4E4D6" stroke-width="2" opacity="0.8"/>
+  <line x1="214" y1="120" x2="214" y2="148" stroke="#D4E4D6" stroke-width="1.2" opacity="0.5"/>
+  <line x1="196" y1="134" x2="232" y2="134" stroke="#D4E4D6" stroke-width="1.2" opacity="0.5"/>
+
+  <!-- ENTRANCE CANOPY (overhang above doors) -->
+  <path d="M 94,154 L 96,144 L 174,144 L 176,154 Z"
+        fill="#7A9E7E" fill-opacity="0.25" stroke="#7A9E7E" stroke-width="1.8"/>
+
+  <!-- DOUBLE DOORS (automatic sliding style) -->
+  <rect x="106" y="154" width="24" height="58" rx="3"
+        fill="#7A9E7E" fill-opacity="0.18" stroke="#7A9E7E" stroke-width="2"/>
+  <rect x="133" y="154" width="24" height="58" rx="3"
+        fill="#7A9E7E" fill-opacity="0.18" stroke="#7A9E7E" stroke-width="2"/>
+  <!-- Door handles -->
+  <line x1="126" y1="184" x2="130" y2="184" stroke="#C4956A" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+  <line x1="140" y1="184" x2="144" y2="184" stroke="#C4956A" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- STEPS -->
+  <line x1="90" y1="212" x2="180" y2="212" stroke="#C4956A" stroke-width="2.5" stroke-linecap="round" opacity="0.45"/>
+  <line x1="82" y1="220" x2="188" y2="220" stroke="#C4956A" stroke-width="2.5" stroke-linecap="round" opacity="0.35"/>
 </svg>
