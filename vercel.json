@@ -3,7 +3,9 @@
   "outputDirectory": "dist",
   "framework": "astro",
   "redirects": [
-    { "source": "/intro", "destination": "https://calendar.app.google/2UUUtz6JJ4zLQycv9", "permanent": false }
+    { "source": "/intro", "destination": "https://calendar.app.google/2UUUtz6JJ4zLQycv9", "permanent": false },
+    { "source": "/central-valley", "destination": "/remote", "permanent": true },
+    { "source": "/services", "destination": "/in-person", "permanent": false }
   ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/$1" }
