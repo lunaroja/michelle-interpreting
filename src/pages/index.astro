@@ -8,34 +8,38 @@ import Layout from '../layouts/Layout.astro';
     <div class="absolute inset-0 opacity-20"
          style="background: radial-gradient(ellipse at 80% 20%, #7A9E7E 0%, transparent 60%), radial-gradient(ellipse at 10% 80%, #C4956A 0%, transparent 50%);">
     </div>
-    <div class="relative max-w-6xl mx-auto px-6 py-28 md:py-36">
-      <img src="/images/home-illustration.svg" alt="" aria-hidden="true"
-           class="absolute right-0 top-1/2 -translate-y-1/2 w-56 md:w-72 opacity-[0.65] pointer-events-none select-none hidden lg:block" />
-      <p class="text-xs tracking-[4px] uppercase text-clay mb-6 font-body">Spanish Medical Interpreting</p>
-      <h1 class="font-display text-5xl md:text-7xl text-cream leading-tight mb-4 max-w-2xl">
-        Your voice.<br/>
-        <span class="italic text-clay">Their care.</span>
-      </h1>
-      <p class="text-sm text-clay/80 tracking-wide mb-6 font-body">
-        Serving <span
-          id="hero-location"
-          data-locations='["Walnut Creek","Concord","Oakland","Danville","San Ramon","Lafayette","Pleasant Hill","Fresno","Stockton","Modesto","the East Bay","the Central Valley","California","nationwide"]'
-          style="transition: opacity 0.35s ease-in-out;"
-        >Walnut Creek</span>
-      </p>
-      <p class="text-lg text-mist/80 max-w-xl leading-relaxed mb-10 font-body">
-        Every patient deserves to be fully heard. Mi Voz provides certified, HIPAA-compliant
-        Spanish interpreting for healthcare providers — in-person, video, and phone.
-      </p>
-      <div class="flex flex-col sm:flex-row gap-4">
-        <a href="/providers"
-           class="bg-clay text-white font-medium px-7 py-3.5 rounded-full hover:bg-earth transition-colors text-center">
-          I'm a Healthcare Provider
-        </a>
-        <a href="/contact"
-           class="border border-mist/40 text-mist font-medium px-7 py-3.5 rounded-full hover:border-clay hover:text-clay transition-colors text-center">
-          Book a Session
-        </a>
+    <div class="relative max-w-6xl mx-auto px-6 py-28 md:py-36 lg:flex lg:items-center lg:gap-12">
+      <div class="flex-1 min-w-0">
+        <p class="text-xs tracking-[4px] uppercase text-clay mb-6 font-body">Spanish Medical Interpreting</p>
+        <h1 class="font-display text-5xl md:text-7xl text-cream leading-tight mb-4 max-w-2xl">
+          Your voice.<br/>
+          <span class="italic text-clay">Their care.</span>
+        </h1>
+        <p class="text-sm text-clay/80 tracking-wide mb-6 font-body">
+          Serving <span
+            id="hero-location"
+            data-locations='["Walnut Creek","Concord","Oakland","Danville","San Ramon","Lafayette","Pleasant Hill","Fresno","Stockton","Modesto","the East Bay","the Central Valley","California","nationwide"]'
+            style="transition: opacity 0.35s ease-in-out;"
+          >Walnut Creek</span>
+        </p>
+        <p class="text-lg text-mist/80 max-w-xl leading-relaxed mb-10 font-body">
+          Every patient deserves to be fully heard. Mi Voz provides certified, HIPAA-compliant
+          Spanish interpreting for healthcare providers — in-person, video, and phone.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="/providers"
+             class="bg-clay text-white font-medium px-7 py-3.5 rounded-full hover:bg-earth transition-colors text-center">
+            I'm a Healthcare Provider
+          </a>
+          <a href="/contact"
+             class="border border-mist/40 text-mist font-medium px-7 py-3.5 rounded-full hover:border-clay hover:text-clay transition-colors text-center">
+            Book a Session
+          </a>
+        </div>
+      </div>
+      <div class="hidden lg:flex flex-none w-72 justify-center items-center">
+        <img src="/images/home-illustration.svg" alt="" aria-hidden="true"
+             class="w-56 md:w-72 opacity-[0.65] pointer-events-none select-none" />
       </div>
     </div>
   </section>
