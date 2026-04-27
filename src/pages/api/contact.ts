@@ -1,34 +1,17 @@
 import type { APIRoute } from 'astro';
 import { Resend } from 'resend';
+import { checkBotId } from 'botid/server';
 
 export const prerender = false;
 
-async function verifyTurnstile(token: string, ip: string): Promise<boolean> {
-  const res = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    body: new URLSearchParams({
-      secret: import.meta.env.TURNSTILE_SECRET_KEY,
-      response: token,
-      remoteip: ip,
-    }),
-  });
-  const json = await res.json() as { success: boolean };
-  return json.success;
-}
+export const POST: APIRoute = async ({ request }) => {
+  const verification = await checkBotId();
+  if (verification.isBot) {
+    return new Response(JSON.stringify({ ok: false }), { status: 403 });
+  }
 
-export const POST: APIRoute = async ({ request, clientAddress }) => {
   const resend = new Resend(import.meta.env.RESEND_API_KEY);
   const data = await request.formData();
-
-  const turnstileToken = data.get('cf-turnstile-response') as string | null;
-  if (!turnstileToken) {
-    return new Response(null, { status: 302, headers: { Location: '/contact?error=true' } });
-  }
-  const valid = await verifyTurnstile(turnstileToken, clientAddress);
-  if (!valid) {
-    return new Response(null, { status: 302, headers: { Location: '/contact?error=true' } });
-  }
 
   const name = data.get('name') || '';
   const email = data.get('email') || '';
@@ -86,8 +69,8 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
 
   if (error) {
     console.error('Resend error:', JSON.stringify(error));
-    return new Response(null, { status: 302, headers: { Location: '/contact?error=true' } });
+    return new Response(JSON.stringify({ ok: false }), { status: 500 });
   }
 
-  return new Response(null, { status: 302, headers: { Location: '/contact?sent=true' } });
+  return new Response(JSON.stringify({ ok: true }), { status: 200 });
 };

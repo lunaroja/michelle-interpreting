@@ -1,6 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
 ---
 <Layout title="Contact & Book" description="Book a Spanish interpreting session or send an inquiry. In-person, video, and phone interpreting available for healthcare providers.">
 
@@ -188,8 +187,6 @@ const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
           ></textarea>
         </div>
 
-        <div class="cf-turnstile" data-sitekey={siteKey} data-theme="light"></div>
-
         <button
           type="submit"
           class="w-full bg-clay text-white font-medium py-4 rounded-full hover:bg-earth transition-colors text-sm tracking-wide">
@@ -256,10 +253,6 @@ const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
 </Layout>
 
 <script>
-  const params = new URLSearchParams(window.location.search);
-  if (params.get('sent') === 'true') document.getElementById('success-msg')!.classList.remove('hidden');
-  if (params.get('error') === 'true') document.getElementById('error-msg')!.classList.remove('hidden');
-
   const serviceSelect = document.getElementById('service') as HTMLSelectElement;
   const durationSelect = document.getElementById('duration') as HTMLSelectElement;
   const virtualFields = document.getElementById('virtual-fields') as HTMLElement;
@@ -304,6 +297,33 @@ const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
   }
 
   serviceSelect.addEventListener('change', () => updateForm(serviceSelect.value));
-</script>
 
-<script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  // BotID: initialize protection on this route
+  import { initBotId } from 'botid/client/core';
+  initBotId({ protect: [{ path: '/api/contact', method: 'POST' }] });
+
+  // Convert form to fetch so BotID headers are attached
+  const form = document.querySelector('form')!;
+  const submitBtn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending…';
+
+    try {
+      const res = await fetch('/api/contact', { method: 'POST', body: new FormData(form) });
+      if (res.ok) {
+        document.getElementById('success-msg')!.classList.remove('hidden');
+        form.reset();
+      } else {
+        document.getElementById('error-msg')!.classList.remove('hidden');
+      }
+    } catch {
+      document.getElementById('error-msg')!.classList.remove('hidden');
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Request a Booking →';
+    }
+  });
+</script>
