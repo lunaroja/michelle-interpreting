@@ -1,56 +1,107 @@
-<svg viewBox="0 0 280 282" xmlns="http://www.w3.org/2000/svg" fill="none">
+<svg viewBox="0 0 260 320" xmlns="http://www.w3.org/2000/svg" fill="none">
 
-  <!-- SPEECH BUBBLES (main visual, top portion) -->
-
-  <!-- Large speech bubble (clay) with tail down-left -->
-  <path d="M 24,6 L 180,6 Q 196,6 196,22 L 196,108 Q 196,124 180,124 L 68,124 L 46,148 L 38,124 L 24,124 Q 8,124 8,108 L 8,22 Q 8,6 24,6 Z"
-        fill="#C4956A" fill-opacity="0.18" stroke="#C4956A" stroke-width="2.5" stroke-linejoin="round"/>
-  <!-- Text lines -->
-  <line x1="28" y1="48" x2="138" y2="48" stroke="#F5F0E8" stroke-width="3" stroke-linecap="round" opacity="0.75"/>
-  <line x1="28" y1="68" x2="162" y2="68" stroke="#F5F0E8" stroke-width="3" stroke-linecap="round" opacity="0.75"/>
-  <line x1="28" y1="88" x2="110" y2="88" stroke="#F5F0E8" stroke-width="3" stroke-linecap="round" opacity="0.75"/>
-
-  <!-- Small response bubble (sage) with tail up-right -->
-  <path d="M 74,120 L 170,120 L 192,98 L 220,120 L 238,120 Q 252,120 252,134 L 252,206 Q 252,220 238,220 L 74,220 Q 60,220 60,206 L 60,134 Q 60,120 74,120 Z"
-        fill="#7A9E7E" fill-opacity="0.15" stroke="#7A9E7E" stroke-width="2" stroke-linejoin="round"/>
-  <!-- Text lines -->
-  <line x1="78" y1="152" x2="192" y2="152" stroke="#D4E4D6" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
-  <line x1="78" y1="172" x2="228" y2="172" stroke="#D4E4D6" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
-  <line x1="78" y1="192" x2="162" y2="192" stroke="#D4E4D6" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
-
-  <!-- MINI CLINIC BUILDING (bottom-left) -->
-  <!-- Flat parapet -->
-  <rect x="4" y="228" width="108" height="9" rx="2"
-        fill="#C4956A" fill-opacity="0.3" stroke="#C4956A" stroke-width="1.5"/>
+  <!-- ─── HOSPITAL ─── -->
+  <!-- Parapet / flat roof -->
+  <rect x="50" y="8" width="160" height="13" rx="3"
+        fill="#C4956A" fill-opacity="0.22" stroke="#C4956A" stroke-width="1.8"/>
   <!-- Building body -->
-  <rect x="8" y="236" width="100" height="42" rx="2"
-        fill="#C4956A" fill-opacity="0.1" stroke="#C4956A" stroke-width="1.8"/>
-  <!-- Two windows -->
-  <rect x="16" y="242" width="22" height="17" rx="2"
-        fill="#D4E4D6" fill-opacity="0.25" stroke="#D4E4D6" stroke-width="1.5" opacity="0.8"/>
-  <line x1="27" y1="242" x2="27" y2="259" stroke="#D4E4D6" stroke-width="1" opacity="0.5"/>
-  <rect x="78" y="242" width="22" height="17" rx="2"
-        fill="#D4E4D6" fill-opacity="0.25" stroke="#D4E4D6" stroke-width="1.5" opacity="0.8"/>
-  <line x1="89" y1="242" x2="89" y2="259" stroke="#D4E4D6" stroke-width="1" opacity="0.5"/>
-  <!-- Mini cross -->
-  <rect x="49" y="241" width="18" height="6" rx="1" fill="#C4956A" fill-opacity="0.55" stroke="#C4956A" stroke-width="1"/>
-  <rect x="55" y="235" width="6" height="18" rx="1" fill="#C4956A" fill-opacity="0.55" stroke="#C4956A" stroke-width="1"/>
-  <!-- Mini door -->
-  <rect x="44" y="258" width="28" height="20" rx="2"
-        fill="#7A9E7E" fill-opacity="0.2" stroke="#7A9E7E" stroke-width="1.5"/>
+  <rect x="55" y="20" width="150" height="84" rx="3"
+        fill="#C4956A" fill-opacity="0.08" stroke="#C4956A" stroke-width="2"/>
 
-  <!-- MINI LAPTOP (bottom-right) -->
-  <!-- Screen -->
-  <rect x="164" y="228" width="112" height="38" rx="5"
-        fill="#C4956A" fill-opacity="0.1" stroke="#C4956A" stroke-width="1.8"/>
+  <!-- Left window (cross-paned) -->
+  <rect x="64" y="32" width="32" height="26" rx="2"
+        fill="#D4E4D6" fill-opacity="0.18" stroke="#D4E4D6" stroke-width="1.5"/>
+  <line x1="80" y1="32" x2="80" y2="58" stroke="#D4E4D6" stroke-width="1.2" opacity="0.5"/>
+  <line x1="64" y1="45" x2="96" y2="45" stroke="#D4E4D6" stroke-width="1.2" opacity="0.5"/>
+
+  <!-- Right window (cross-paned) -->
+  <rect x="164" y="32" width="32" height="26" rx="2"
+        fill="#D4E4D6" fill-opacity="0.18" stroke="#D4E4D6" stroke-width="1.5"/>
+  <line x1="180" y1="32" x2="180" y2="58" stroke="#D4E4D6" stroke-width="1.2" opacity="0.5"/>
+  <line x1="164" y1="45" x2="196" y2="45" stroke="#D4E4D6" stroke-width="1.2" opacity="0.5"/>
+
+  <!-- Medical cross (centred at x=130) -->
+  <rect x="124" y="26" width="12" height="40" rx="2"
+        fill="#C4956A" fill-opacity="0.5" stroke="#C4956A" stroke-width="1.2"/>
+  <rect x="110" y="40" width="40" height="12" rx="2"
+        fill="#C4956A" fill-opacity="0.5" stroke="#C4956A" stroke-width="1.2"/>
+
+  <!-- Door -->
+  <rect x="115" y="83" width="30" height="21" rx="2"
+        fill="#7A9E7E" fill-opacity="0.22" stroke="#7A9E7E" stroke-width="1.5"/>
+  <circle cx="140" cy="94" r="2" fill="#7A9E7E" opacity="0.55"/>
+
+  <!-- ─── SPEECH BUBBLES ─── -->
+
+  <!-- Left bubble — Spanish / patient (clay) -->
+  <rect x="6" y="118" width="112" height="50" rx="10"
+        fill="#C4956A" fill-opacity="0.14" stroke="#C4956A" stroke-width="2"/>
+  <!-- Tail pointing down toward interpreter -->
+  <path d="M 54,168 L 64,186 L 80,168 Z"
+        fill="#C4956A" fill-opacity="0.14" stroke="#C4956A" stroke-width="2"
+        stroke-linejoin="round"/>
+  <!-- ES label pill -->
+  <rect x="14" y="123" width="24" height="14" rx="7"
+        fill="#C4956A" fill-opacity="0.45"/>
+  <text x="26" y="133.5" text-anchor="middle"
+        font-family="system-ui, sans-serif" font-size="7.5" font-weight="700"
+        fill="#F5F0E8">ES</text>
+  <!-- Simulated text lines -->
+  <line x1="44" y1="130" x2="106" y2="130" stroke="#F5F0E8" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
+  <line x1="14" y1="145" x2="106" y2="145" stroke="#F5F0E8" stroke-width="2.5" stroke-linecap="round" opacity="0.4"/>
+  <line x1="14" y1="158" x2="70" y2="158" stroke="#F5F0E8" stroke-width="2.5" stroke-linecap="round" opacity="0.4"/>
+
+  <!-- Right bubble — English / provider (sage) -->
+  <rect x="142" y="118" width="112" height="50" rx="10"
+        fill="#7A9E7E" fill-opacity="0.14" stroke="#7A9E7E" stroke-width="2"/>
+  <!-- Tail pointing down toward interpreter -->
+  <path d="M 180,168 L 196,186 L 210,168 Z"
+        fill="#7A9E7E" fill-opacity="0.14" stroke="#7A9E7E" stroke-width="2"
+        stroke-linejoin="round"/>
+  <!-- EN label pill -->
+  <rect x="222" y="123" width="24" height="14" rx="7"
+        fill="#7A9E7E" fill-opacity="0.45"/>
+  <text x="234" y="133.5" text-anchor="middle"
+        font-family="system-ui, sans-serif" font-size="7.5" font-weight="700"
+        fill="#F5F0E8">EN</text>
+  <!-- Simulated text lines -->
+  <line x1="150" y1="130" x2="216" y2="130" stroke="#D4E4D6" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
+  <line x1="150" y1="145" x2="242" y2="145" stroke="#D4E4D6" stroke-width="2.5" stroke-linecap="round" opacity="0.4"/>
+  <line x1="150" y1="158" x2="206" y2="158" stroke="#D4E4D6" stroke-width="2.5" stroke-linecap="round" opacity="0.4"/>
+
+  <!-- ─── INTERPRETER PERSON ─── -->
+  <!-- Head -->
+  <circle cx="130" cy="216" r="20"
+          fill="#D4E4D6" fill-opacity="0.16" stroke="#D4E4D6" stroke-width="2.2"/>
+  <!-- Headphones arc (interpreter role) -->
+  <path d="M 111,216 Q 111,199 130,196 Q 149,199 149,216"
+        stroke="#C4956A" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.75"/>
+  <!-- Headphone ear cups -->
+  <rect x="107" y="213" width="8" height="12" rx="4"
+        fill="#C4956A" fill-opacity="0.35" stroke="#C4956A" stroke-width="1.5"/>
+  <rect x="145" y="213" width="8" height="12" rx="4"
+        fill="#C4956A" fill-opacity="0.35" stroke="#C4956A" stroke-width="1.5"/>
+  <!-- Body / torso -->
+  <path d="M 98,244 Q 98,238 114,236 L 130,234 L 146,236 Q 162,238 162,244 L 166,270 Q 130,274 94,270 Z"
+        fill="#D4E4D6" fill-opacity="0.12" stroke="#D4E4D6" stroke-width="2"/>
+
+  <!-- ─── LAPTOP ─── -->
+  <!-- Screen frame -->
+  <rect x="66" y="282" width="128" height="30" rx="5"
+        fill="#3D6B4F" fill-opacity="0.22" stroke="#7A9E7E" stroke-width="2"/>
   <!-- Camera dot -->
-  <circle cx="220" cy="232" r="2.5" fill="#C4956A" opacity="0.65"/>
-  <!-- Screen glass -->
-  <rect x="172" y="236" width="96" height="24" rx="3"
-        fill="#7A9E7E" fill-opacity="0.1" stroke="#D4E4D6" stroke-width="1.2" opacity="0.6"/>
-  <!-- Person silhouette inside screen -->
-  <circle cx="220" cy="244" r="7" fill="#D4E4D6" fill-opacity="0.3" stroke="#D4E4D6" stroke-width="1.5" opacity="0.65"/>
-  <!-- Base/keyboard -->
-  <rect x="156" y="266" width="128" height="11" rx="4"
-        fill="#C4956A" fill-opacity="0.12" stroke="#C4956A" stroke-width="1.8"/>
+  <circle cx="130" cy="287" r="2.5" fill="#7A9E7E" opacity="0.6"/>
+  <!-- Video call — person head -->
+  <circle cx="130" cy="297" r="8"
+          fill="#C4956A" fill-opacity="0.22" stroke="#C4956A" stroke-width="1.5"/>
+  <!-- Shoulders hint -->
+  <path d="M 119,310 Q 119,306 130,305 Q 141,306 141,310"
+        stroke="#C4956A" stroke-width="1.5" stroke-linecap="round" opacity="0.45"/>
+  <!-- Keyboard base -->
+  <rect x="54" y="312" width="152" height="8" rx="4"
+        fill="#3D6B4F" fill-opacity="0.18" stroke="#7A9E7E" stroke-width="1.8"/>
+  <!-- Touchpad -->
+  <rect x="112" y="314" width="36" height="4" rx="2"
+        fill="#7A9E7E" fill-opacity="0.28"/>
+
 </svg>
