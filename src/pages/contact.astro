@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
 ---
 <Layout title="Contact & Book" description="Book a Spanish interpreting session or send an inquiry. In-person, video, and phone interpreting available for healthcare providers.">
 
@@ -187,6 +188,8 @@ import Layout from '../layouts/Layout.astro';
           ></textarea>
         </div>
 
+        <div class="cf-turnstile" data-sitekey={siteKey} data-theme="light"></div>
+
         <button
           type="submit"
           class="w-full bg-clay text-white font-medium py-4 rounded-full hover:bg-earth transition-colors text-sm tracking-wide">
@@ -302,3 +305,5 @@ import Layout from '../layouts/Layout.astro';
 
   serviceSelect.addEventListener('change', () => updateForm(serviceSelect.value));
 </script>
+
+<script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
