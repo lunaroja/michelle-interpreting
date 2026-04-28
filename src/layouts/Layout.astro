@@ -2,10 +2,12 @@
 export interface Props {
   title: string;
   description?: string;
+  noindex?: boolean;
 }
 const {
   title,
-  description = "Professional Spanish medical interpreting services. In-person, video, and phone. HIPAA-compliant. Serving healthcare providers and patients."
+  description = "Professional Spanish medical interpreting services. In-person, video, and phone. HIPAA-compliant. Serving healthcare providers and patients.",
+  noindex = false
 } = Astro.props;
 ---
 <!DOCTYPE html>
@@ -20,6 +22,18 @@ const {
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="canonical" href={`https://mivozinterpreting.com${Astro.url.pathname}`} />
+  <!-- OG tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={`https://mivozinterpreting.com${Astro.url.pathname}`} />
+  <meta property="og:title" content={`${title} | Mi Voz Interpreting`} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content="https://mivozinterpreting.com/og-image.jpg" />
+  <!-- Twitter card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={`${title} | Mi Voz Interpreting`} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content="https://mivozinterpreting.com/og-image.jpg" />
+  {noindex && <meta name="robots" content="noindex, nofollow" />}
   <!-- Local Business structured data -->
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
@@ -53,7 +67,7 @@ const {
     ],
     "serviceType": ["Medical Interpreting", "Behavioral Health Interpreting", "Document Translation"],
     "priceRange": "$$",
-    "sameAs": []
+    "sameAs": ["https://share.google/GFoLah0LJV7GRKkvA"]
   })} />
 </head>
 <body class="bg-warm-white font-body text-bark antialiased">
