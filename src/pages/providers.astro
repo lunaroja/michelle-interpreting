@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 ---
-<Layout title="Spanish Interpreter for Healthcare Providers — HIPAA-Compliant" description="Certified Spanish medical interpreter for hospitals, clinics, and agencies in Walnut Creek and the Bay Area. HIPAA-compliant, CMI certified. Significantly below LanguageLine and agency rates.">
+<Layout title="Spanish Interpreter for Healthcare Providers — HIPAA-Compliant" description="Certified Spanish medical interpreter for independent clinics, FQHCs, nonprofits, and behavioral health programs in Walnut Creek and the Bay Area. CMI certified. HIPAA-compliant. Behavioral health specialty.">
 
   <!-- HERO -->
   <section class="bg-deep-forest py-24 relative overflow-hidden">
@@ -16,8 +16,9 @@ import Layout from '../layouts/Layout.astro';
           <span class="italic text-clay">The partner your practice deserves.</span>
         </h1>
         <p class="text-mist/80 max-w-xl leading-relaxed mb-8">
-          Certified, HIPAA-compliant Spanish interpreting for hospitals, clinics, community health
-          centers, agencies, and staffing firms. Agency-trained quality at independent pricing.
+          Certified, HIPAA-compliant Spanish interpreting for independent clinics, private practices,
+          FQHCs, nonprofits, and behavioral health programs. One dedicated interpreter who knows your
+          practice, your patients, and your mission.
         </p>
         <a href="/contact"
            class="inline-block bg-clay text-white font-medium px-8 py-4 rounded-full hover:bg-earth transition-colors">
@@ -35,14 +36,14 @@ import Layout from '../layouts/Layout.astro';
   <section class="max-w-6xl mx-auto px-6 py-20">
     <p class="text-xs tracking-[4px] uppercase text-earth mb-4 font-body">Who We Work With</p>
     <h2 class="font-display text-3xl md:text-4xl text-deep-forest mb-12">
-      Built for every type of <span class="italic">healthcare organization</span>
+      Built for the organizations <span class="italic">serving communities most in need</span>
     </h2>
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
       {[
-        { icon: '🏥', title: 'Hospitals & Health Systems', desc: 'Supplement your language access program with a certified, dedicated Spanish interpreter.' },
-        { icon: '🩺', title: 'Private Practices & Clinics', desc: 'Affordable professional interpreting that fits smaller budgets without compromising quality.' },
-        { icon: '🤝', title: 'Language & Staffing Agencies', desc: 'Subcontract a certified Spanish interpreter to fulfill client placements reliably.' },
-        { icon: '🌿', title: 'Community Health Centers', desc: 'Mission-aligned interpreting for FQHCs and nonprofits serving underserved communities.' },
+        { icon: '🩺', title: 'Private Practices & Solo Clinicians', desc: 'Personal, reliable interpreting that fits the budget and workflow of smaller practices without compromising professional standards.' },
+        { icon: '🌿', title: 'FQHCs & Community Health Centers', desc: 'Mission-aligned interpreting for federally qualified health centers serving underserved and LEP patient populations.' },
+        { icon: '🧠', title: 'Behavioral Health Programs', desc: 'Specialized interpreting for therapy, psychiatry, substance use, and crisis settings — where emotional nuance matters most.' },
+        { icon: '🤝', title: 'Nonprofits & Safety-Net Clinics', desc: 'Flexible arrangements for organizations doing the hardest community health work, including nonprofit-friendly rates.' },
       ].map(c => (
         <div class="bg-cream rounded-2xl p-6 border border-mist">
           <div class="text-3xl mb-4">{c.icon}</div>
@@ -100,17 +101,18 @@ import Layout from '../layouts/Layout.astro';
       <div class="bg-deep-forest rounded-2xl p-10">
         <p class="text-xs tracking-[3px] uppercase text-clay mb-4 font-body">The Mi Voz Difference</p>
         <h3 class="font-display text-2xl text-cream mb-6 leading-snug">
-          Agency expertise.<br/>
-          <span class="italic text-clay">Independent pricing.</span>
+          Certified expertise.<br/>
+          <span class="italic text-clay">Built for your mission.</span>
         </h3>
         <p class="text-mist/80 text-sm leading-relaxed mb-6">
-          Large agencies charge for overhead, management layers, and dispatcher markups.
-          Mi Voz cuts those costs without cutting quality — Michelle trained inside a leading
-          Language World agency and brings the same professional standard at a
-          rate that makes sense for your budget.
+          Independent clinics, FQHCs, and nonprofits deserve the same caliber of professional
+          interpreting as any large health system — without the billing structures designed for
+          enterprise contracts. Michelle brings CMI certification, behavioral health specialty,
+          and 13+ years of experience to organizations of every size, with rates that reflect
+          the mission-driven nature of your work.
         </p>
         <div class="border-t border-forest/50 pt-6 space-y-3">
-          {['No agency overhead or markups', 'Transparent, straightforward pricing', 'Custom arrangements for regular engagements', 'Fair rates for nonprofits & FQHCs'].map(i => (
+          {['Transparent, straightforward pricing', 'Custom arrangements for regular engagements', 'Nonprofit- and FQHC-friendly rates available', 'Continuity of care — same interpreter every time'].map(i => (
             <div class="flex items-center gap-3 text-sm text-mist/80">
               <span class="text-clay">→</span> {i}
             </div>
@@ -120,12 +122,13 @@ import Layout from '../layouts/Layout.astro';
       <div>
         <p class="text-xs tracking-[4px] uppercase text-earth mb-4 font-body">Why One Dedicated Interpreter?</p>
         <h2 class="font-display text-3xl text-deep-forest mb-6">
-          Not a <span class="italic">random dispatch.</span>
-          <br/>A real partner.
+          One interpreter.<br/>
+          <span class="italic">A lasting partnership.</span>
         </h2>
         <p class="text-bark/70 leading-relaxed mb-4 text-sm">
-          When you work with a large agency, you get whoever is available. That interpreter doesn't
-          know your workflow, your providers, or your patient population.
+          Continuity of care matters in interpreting just as much as it does in medicine.
+          When your patients see a familiar face — and when your interpreter has learned the
+          rhythms of your practice — every session goes deeper.
         </p>
         <p class="text-bark/70 leading-relaxed mb-4 text-sm">
           With Mi Voz, you work with Michelle — consistently. She learns the rhythms of your
@@ -148,8 +151,8 @@ import Layout from '../layouts/Layout.astro';
         No hidden fees. No <span class="italic">per-minute surprises.</span>
       </h2>
       <p class="text-bark/70 text-center mb-14 max-w-xl mx-auto text-sm leading-relaxed">
-        Traditional agencies often charge $3.95–$4.95 per minute.<br/>
-        Our pricing is transparent and significantly more affordable.
+        Simple, flat-rate pricing — designed for the way independent clinics and community
+        health organizations actually work. No per-minute surprises, no enterprise billing structures.
       </p>
       <div class="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto mb-12">
         <div class="bg-white rounded-2xl p-8 border border-mist shadow-sm flex flex-col">
@@ -183,7 +186,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
           <p class="text-xs text-bark/50 mb-6">2-hour minimum</p>
           <ul class="space-y-2 mb-8 flex-1">
-            {['Best for medical visits, legal appointments, and in-person support', 'Same interpreter every time', 'No agency dispatch fee', 'Travel included in service area'].map(f => (
+            {['Best for medical visits, behavioral health, and sensitive consultations', 'Continuity of care — same interpreter every time', 'No hidden fees or billing surprises', 'Travel included within service area'].map(f => (
               <li class="flex items-start gap-3 text-sm text-bark/70">
                 <span class="text-clay mt-0.5 flex-shrink-0">✓</span> {f}
               </li>
@@ -226,7 +229,7 @@ import Layout from '../layouts/Layout.astro';
         <p class="text-bark/70 leading-relaxed mb-8 text-sm">
           Via video remote interpreting (VRI) and over-the-phone (OPI), Mi Voz can serve Central Valley
           clinics, FQHCs, and behavioral health programs with the same certified, professional standard as
-          Bay Area clients — at rates well below the national platforms.
+          Bay Area clients — with pricing designed for organizations serving underserved communities.
         </p>
         <div class="flex flex-wrap gap-2 mb-8">
           {['Fresno', 'Stockton', 'Modesto', 'Merced', 'Visalia', 'Bakersfield'].map(city => (
@@ -247,11 +250,11 @@ import Layout from '../layouts/Layout.astro';
       <div class="bg-cream rounded-2xl p-10 border border-mist space-y-5">
         <h3 class="font-body font-medium text-deep-forest text-sm uppercase tracking-widest mb-6">Why VRI works for the Central Valley</h3>
         {[
-          { icon: '✓', text: 'Same certified interpreter — not a random dispatch from a national platform' },
+          { icon: '✓', text: 'One dedicated interpreter — continuity of care across every session' },
           { icon: '✓', text: 'Behavioral health specialty for mental health and substance use clinics' },
-          { icon: '✓', text: 'Significantly below LanguageLine & Boostlingo per-minute rates' },
+          { icon: '✓', text: 'Flat-rate, transparent pricing — designed for FQHCs and community health organizations' },
           { icon: '✓', text: 'Telehealth-ready — Zoom, Teams, Doxy.me, or your existing platform' },
-          { icon: '✓', text: 'Spanish-first focus — not a 240-language platform staffed by generalists' },
+          { icon: '✓', text: 'Dedicated Spanish focus — deeply fluent, culturally responsive communication' },
         ].map(i => (
           <div class="flex items-start gap-4">
             <span class="text-clay font-bold mt-0.5 flex-shrink-0">{i.icon}</span>
