@@ -8,8 +8,8 @@ import Layout from '../layouts/Layout.astro';
     <div class="absolute inset-0 opacity-20"
          style="background: radial-gradient(ellipse at 80% 20%, #7A9E7E 0%, transparent 60%), radial-gradient(ellipse at 10% 80%, #C4956A 0%, transparent 50%);">
     </div>
-    <div class="relative max-w-6xl mx-auto px-6 py-28 md:py-36 lg:flex lg:items-center lg:gap-12">
-      <div class="flex-1 min-w-0">
+    <div class="relative max-w-6xl mx-auto px-6 py-28 md:py-36 lg:grid lg:grid-cols-2 lg:items-center lg:gap-12">
+      <div class="min-w-0">
         <p class="text-xs tracking-[4px] uppercase text-clay mb-6 font-body">Spanish Medical Interpreting</p>
         <h1 class="font-display text-5xl md:text-7xl text-cream leading-tight mb-4 max-w-2xl">
           Your voice.<br/>
@@ -37,9 +37,9 @@ import Layout from '../layouts/Layout.astro';
           </a>
         </div>
       </div>
-      <div class="hidden lg:flex flex-none w-72 justify-start items-center">
+      <div class="hidden lg:flex lg:items-center lg:justify-start">
         <img src="/images/home-illustration.svg" alt="" aria-hidden="true"
-             class="w-56 md:w-72 opacity-[0.65] pointer-events-none select-none" />
+             class="w-full max-w-xs opacity-[0.65] pointer-events-none select-none" />
       </div>
     </div>
   </section>
