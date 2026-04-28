@@ -8,22 +8,26 @@ import Layout from '../layouts/Layout.astro';
     <div class="absolute inset-0 opacity-20"
          style="background: radial-gradient(ellipse at 80% 30%, #7A9E7E 0%, transparent 55%);">
     </div>
-    <div class="relative max-w-6xl mx-auto px-6">
-      <img src="/images/providers-illustration.svg" alt="" aria-hidden="true"
-           class="absolute right-0 top-1/2 -translate-y-1/2 w-56 md:w-72 opacity-[0.65] pointer-events-none select-none hidden lg:block" />
-      <p class="text-xs tracking-[4px] uppercase text-clay mb-4 font-body">Healthcare Organizations</p>
-      <h1 class="font-display text-5xl text-cream mb-6 max-w-2xl leading-tight">
-        The interpreter your patients need.<br/>
-        <span class="italic text-clay">The partner your practice deserves.</span>
-      </h1>
-      <p class="text-mist/80 max-w-xl leading-relaxed mb-8">
-        Certified, HIPAA-compliant Spanish interpreting for hospitals, clinics, community health
-        centers, agencies, and staffing firms. Agency-trained quality at independent pricing.
-      </p>
-      <a href="/contact"
-         class="inline-block bg-clay text-white font-medium px-8 py-4 rounded-full hover:bg-earth transition-colors">
-        Partner With Mi Voz →
-      </a>
+    <div class="relative max-w-6xl mx-auto px-6 lg:grid lg:grid-cols-2 lg:items-center lg:gap-12">
+      <div class="min-w-0">
+        <p class="text-xs tracking-[4px] uppercase text-clay mb-4 font-body">Healthcare Organizations</p>
+        <h1 class="font-display text-5xl text-cream mb-6 max-w-2xl leading-tight">
+          The interpreter your patients need.<br/>
+          <span class="italic text-clay">The partner your practice deserves.</span>
+        </h1>
+        <p class="text-mist/80 max-w-xl leading-relaxed mb-8">
+          Certified, HIPAA-compliant Spanish interpreting for hospitals, clinics, community health
+          centers, agencies, and staffing firms. Agency-trained quality at independent pricing.
+        </p>
+        <a href="/contact"
+           class="inline-block bg-clay text-white font-medium px-8 py-4 rounded-full hover:bg-earth transition-colors">
+          Partner With Mi Voz →
+        </a>
+      </div>
+      <div class="hidden lg:flex lg:items-center lg:justify-start">
+        <img src="/images/providers-illustration.svg" alt="" aria-hidden="true"
+             class="w-full opacity-[0.65] pointer-events-none select-none" />
+      </div>
     </div>
   </section>
 
